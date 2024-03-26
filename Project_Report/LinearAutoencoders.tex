@@ -1,0 +1,283 @@
+\section{Linear Autoencoders}
+We consider the problem of learning from examples in layered linear feed-forward neural networks using optimization methods, such as back propagation, with respect to the usual quadratic error function E of the connection weights. 
+
+We assume to have $N$ samples and $N$ lables so for each $x_n$ input vector corresponds the $y_n$ label. The classical quadratic error function is defined as:
+\[
+E = \sum_n \|y_n - F(x_n)\|^2 
+\]
+where $F$ is the current function implemented by the network. We defined also the \textbf{covariance matrices}:
+\[
+\begin{split}
+    \Sigma_{XX} &= \sum_n x_n x_n^\intercal\\
+    \Sigma_{XY} &= \sum_n x_n y_n^\intercal\\
+    \Sigma_{YY} &= \sum_n y_n y_n^\intercal\\
+    \Sigma_{YX} &= \sum_n y_n x_n^\intercal\\
+\end{split}
+\]
+Where these quantities are defined. 
+
+\subsection{Useful mathematical concepts}
+For any matrices $P, Q, R$ we have $tr(PQR) = tr(RPQ) = tr(QRP)$ provided that these quantities are defined. Thus in particolar if $P$ is \textbf{idempotent}, that is, $P^2 = P$, then:
+\begin{equation}\tag{a}
+    tr(PQP) = tr(PPQ) = tr(P^2Q) = tr(PQ)
+\end{equation}
+If $U$ is orthogonal, that is $U^\intercal U = I$, then:
+\begin{equation}\tag{b}
+    tr(UQU^\intercal) = tr(U^\intercal UQ) = tr(Q)
+\end{equation}
+
+The \textbf{Kronecker product} $P \otimes Q$ of any two matrices $P$ and $Q$ is the matrix obtained from the matrix $P$ by replacing each entry $p_{ij}$ of $P$ with the matrix $p_{ij}Q$. Which means that:
+\[P: m\times n \text{ and } Q:r\times q \implies 
+P \otimes Q = \begin{bmatrix}
+    p_{11}Q & \dots & a_{1n}Q\\
+    \vdots & \ddots & \vdots\\
+    p_{m1}Q & \dots & p_{mn}Q\\
+\end{bmatrix}
+\text{ of shape } rm\times qn
+\]
+The \textbf{vec operation} transforms a matrix into a column vector by stacking the columns of the matrix one underneath the other. Indeed, if $P$ is any $m \times n$ matrix and $p_j$ is the $j$-th column, then $vec(P)$ is the $mn\times 1$ vector $vec(P) = [p_1^\intercal, \dots, p_n^\intercal]^\intercal$.
+
+We have that:
+\begin{equation} \tag{c}
+    tr(PQ^\intercal) = (vec(P))^\intercal vec(Q)
+\end{equation}
+
+\begin{equation} \tag{d}
+    vec(PQR^\intercal) = (R \otimes P) vec(Q)
+\end{equation}
+
+\begin{equation} \tag{e}
+    (P \otimes Q)(R \otimes S) = PR \otimes QS
+\end{equation}
+
+\begin{equation} \tag{f}
+    (P \otimes Q)^{-1} = P^{-1} \otimes Q^{-1}
+\end{equation}
+
+\begin{equation} \tag{g}
+    (P \otimes Q)^\intercal = P^\intercal \otimes Q^\intercal
+\end{equation}
+whenever these quantities are defined. Also: if $P$ and $Q$ are symmetric and positive semidefinite (resp. definite) then $P \otimes Q$ is symmetric and positive semidefinite (resp. positive definite) (h).
+
+Finally, let us introduce the input data matrix $X = [x_1, \dots, x_N]$ and the output data matrix $Y=[y_1, \dots, y_N]$. It is easily seen that $XX^\intercal = \Sigma_{XX}$, $XY^\intercal = \Sigma_{XY}$, $YY^\intercal = \Sigma_{YY}$, $YX^\intercal = \Sigma_{YX}$ and $E(A,B) = \|vec(Y - ABX)\|^2$. In the proof of facts 1 and 2, we shall use the following well known lemma.
+
+\textbf{Lemma}: the quadratic function:
+\[F(z) = \|c - Mz\|^2 = c^\intercal c - 2c^\intercal Mz + z^\intercal M^\intercal M z\]
+is convex. A point $z$ corresponds to a global minimum of $F$ if and only if it satisfies the equation $\nabla F = 0$, or equivalently $M^\intercal M z = M^\intercal c$. If in addition $M^\intercal M$ is positive definite, then $F$ is strictly convex and the unique minimum of $F$ is attained for $z = (M^\intercal M)^{-1} M^\intercal c$.
+    
+
+\subsection{Fact 1}
+For any fixed $n \times p$ matrix $A$ the function $E(A,B)$ is convex in the coefficients of $B$ and attains its minimum for any $B$ satisfying the equation
+\begin{equation}
+    A^\intercal AB\Sigma_{XX} = A^\intercal \Sigma_{YX}
+\end{equation}
+If $\Sigma_{XX}$ is invertible and A is full rank $p$, then $E$ is strictly convex and has unique minimum reached when:
+\begin{equation}\tag{3}
+    B = \hat{B}(A) = (A^\intercal A)^{-1} A^\intercal \Sigma_{YX}\Sigma_{XX}^{-1}
+\end{equation}
+In the auto-associative case, (3) becomes 
+\begin{equation}\tag{3'}
+    B = \hat{B}(A) = (A^\intercal A)^{-1} A^\intercal 
+\end{equation}
+Since $Y=X$ so $\Sigma_{YX}\Sigma_{XX}^{-1} = I$.
+
+\subsubsection{Proof of fact 1}
+\begin{proof}
+    For fixed A, use (d) to write:
+    \[
+        vec(Y - ABX) = vec(Y) - vec(ABX) = vec(Y) - (X^\intercal \otimes A) vec(B)
+    \]
+    and thus:
+    \[
+    E(A,B) = \|vec(Y) - (X^\intercal \otimes A) vec(B)\|^2
+    \]
+    By the above lemma, $E$ is convex in the coefficients of B and B corresponds to a global minimum if and only if \[
+    (X^\intercal \otimes A)^\intercal (X^\intercal \otimes A) vec(B) = (X^\intercal \otimes A) vec(Y)
+    \]
+    Now on one hand:
+    \[
+    \begin{split}
+         (X^\intercal \otimes A)^\intercal (X^\intercal \otimes A) vec(B) &= (X^\intercal \otimes A) vec(B)\\ &= (XX^\intercal \otimes A^\intercal A) vec(B)\\ &= (\Sigma_{XX} \otimes A^\intercal A)vec(B) \\ &= vec(A^\intercal A B\Sigma_{XX})
+    \end{split}
+    \]
+    On the other hand:
+    \[
+        \begin{split}
+            (X^\intercal \otimes A)^\intercal vec(Y) &= (X \otimes A^\intercal)vec(Y) \\
+            &= vec(A^\intercal YX^\intercal)\\
+            &= vec(A^\intercal \Sigma_{YX})
+        \end{split}
+    \]
+    Therefore:
+    \[
+        A^\intercal AB\Sigma_{XX} = A^\intercal \Sigma_{YX}
+    \]
+    which is (2). If $A$ is full rank, $A^\intercal A$ is symmetric and positive definite. As a covariance matrix, $\Sigma_{XX}$ is symmetric and positive semidefinite; if, in addition, $\Sigma_{XX}$ is invertible, then $\Sigma_{XX}$ is also positive definite. Because of (h), $(X^\intercal  \otimes A)^\intercal (X^\intercal \otimes A) = \Sigma_{XX} \otimes A^\intercal A$ is also symmetric and positive definite. Applying the above lemma, we conclude that if $\Sigma_{XX}$ is invertible and A is a fixed full rank matrix, then $E$ is strictly convex in the coefficients of $B$ and attains its unique minimum at the unique solution $B = \hat{B}(A) = (A^\intercal A)^{-1}A^\intercal \Sigma_{YX} \Sigma_{XX}^{-1}$ of (2), which is (3). In the auto-associative case, $x_n = y_n$. Therefore $\Sigma_{XX} = \Sigma_{YX} = \Sigma_{YY} = \Sigma_{XY}$ and the above expression simplifies to (3').
+    \end{proof}
+    
+\subsection{Fact 3}
+Assume that $\Sigma_{XX}$ is invertible. If two matrices $A$ and $B$ define a critical point of $E$ (i.e. a point where $\frac{\partial E}{\partial a_{ij}} = \frac{\partial E}{\partial b_{ij}} = 0$) then the global map $W = AB$ is of the form:
+\begin{equation} \tag{6}
+    W = P_A \Sigma_{YX}\Sigma_{XX}^{-1}
+\end{equation}
+with $A$ satisfying
+\begin{equation} \tag{7}
+    P_A \Sigma = P_A \Sigma P_A = \Sigma P_A    
+\end{equation}
+Where $\Sigma = \Sigma_{YX} = \Sigma_{XX}^{-1} = \Sigma_{XY}$. Recall also, that the matrix $P_A$ is the matrix of the orthogonal projection onto the subspace spanned by the columns of $A$. In the auto-associative case, $\Sigma = \Sigma_{XX}$ and (6) and (7) become:
+\begin{equation} \tag{6'}
+    W = AB = P_A
+\end{equation}
+\begin{equation} \tag{7'}
+    P_A \Sigma_{XX} = P_A \Sigma_{XX} P_A = \Sigma_{XX} P_A
+\end{equation}
+If $A$ is full rank $p$, then $A$ and $B$ define a critical point of $E$ if and only if $A$ satisfies (7) and $B = \hat{B}(A)$, or equivalently if and only if $A$ and $W$ satisfy (6) and (7).
+
+\subsubsection{Proof of fact 3}
+\begin{proof}
+    Assume first that $A$ and $B$ define a critical point of $E$, with $A$ full rank. Then from fact 1 we get $B = \hat{B}(A)$ and thus
+    \[
+        W = AB = A(A^\intercal A)^{-1}A\Sigma_{YX}\Sigma_{XX}^{-1} = P_A\Sigma_{YX}\Sigma_{XX}^{-1}
+    \]
+    Which is (6). Multiplication of (4) by $A^\intercal$ on the right yields
+    \[
+        W\Sigma_{XX}W^\intercal = AB\Sigma_{XX}B^\intercal A^\intercal = \Sigma_{YX} B^\intercal A^\intercal = \Sigma_{YX} W^\intercal
+    \]
+    Or
+    \[
+        P_A\Sigma_{YX}\Sigma_{XX}^{-1}\Sigma_{XX}\Sigma_{XX}^{-1}\Sigma_{XY}P_A = \Sigma_{YX}\Sigma_{XX}^{-1}\Sigma_{XY}P_A
+    \]
+    Or, equivalently $P_A\Sigma P_A = \Sigma P_A$. Since both $\Sigma$ and $P_A$ are symmetric, $P_A\Sigma P_A = \Sigma P_A$ is also symmetric and therefore $\Sigma P_A = (\Sigma P_A)^\intercal = P_A^\intercal \Sigma^\intercal = P_A\Sigma$, which is (7). Hence if $A$ and $B$ correspond to a critical point and $A$ is full rank then (6) and (7) must hold and $B = \hat{B}(A)$.
+
+    Conversely, assume that $A$ and $W$ satisfy (6) and (7), with $A$ full rank. Multiplying (6) by $(A^\intercal A)^{-1}A^\intercal$ on the left yields
+    \[
+        B = (A^\intercal A)^{-1}A\Sigma_{YX}\Sigma_{XX}^{-1} = \hat{B}(A)
+    \]
+    and (2) is satisfied. From $P_A\Sigma P_A = \Sigma P_A$ and using (6) we immediately get 
+    \[
+        AB\Sigma_{XX}B^\intercal A^\intercal = \Sigma_{YX}B^\intercal A^\intercal
+    \]
+    and multiplication of both sides by $A(A^\intercal A)^{-1}$ on the right yields 
+    \[
+        AB\Sigma_{XX}B^\intercal = \Sigma_{YX}B^\intercal
+    \]
+    which is (4). Thus $A$ and $B$ satisfy (2) and (4) and therefore they define a critical point of $E$.
+\end{proof}
+
+\subsection{Fact 4}
+Assume that $\Sigma$ is full-rank with $n$ distinct eigenvalues $\lambda_1 > \dots > \lambda_n$. If $\mathcal{I} = {i_1, \dots, i_p}$ ($1 \leq i_1 < \dots < i_p \leq n$) is any ordered $p$-index set, let $U_{\mathcal{I}} = [ u_{i_1}, \dots, u_{i_p} ]$ denote the matrix formed by the orthonormal eigenvectors of $\Sigma$ associated with the eigenvalues $\lambda_{i_1}, \dots, \lambda_{i_p}$. Then two full rank matrices $A$ and $B$ define a critical point of $E$ if and only if there exist an ordered $p$-index set $\mathcal{I}$ and an invertible $p \times p$ matrix $C$ such that:
+\begin{equation} \tag{8}
+    A = U_{\mathcal{I}}C
+\end{equation}
+\begin{equation} \tag{9}
+    B = C^{-1}U_{\mathcal{I}}^\intercal \Sigma_{YX}\Sigma_{XX}^{-1}
+\end{equation}
+
+For such a critical point we have:
+\begin{equation} \tag{10}
+    W = P_{U_\mathcal{I}}\Sigma_{YX}\Sigma_{XX}^{-1}
+\end{equation}
+\begin{equation} \tag{11}
+    E(A,B) = tr(\Sigma_{YY}) - \sum_{i \in \mathcal{I}} \lambda_i
+\end{equation}
+Therefore a critical $W$ of rank $p$ is always the product of the ordinary least squares regression matrix followed by an orthogonal projection onto the subspace spanned by $p$ eigenvectors of $\Sigma$. The critical map $W$ associated with the index set ${1,2,\dots, p}$ is the unique local and global minimum of $E$. The remaining $\binom{n}{p} - 1$ $p$-index sets correspond to saddle points. All additional critical points defined by matrices $A$ and $B$ which are not full rank are also saddle points and can be characterized in terms of orthogonal projections onto subspaces spanned by $q$ eigenvectors of $\Sigma$ with $q < p$ (see Figure 1). 
+\begin{figure}[H]
+    \caption{Landscape of $E$}
+    \centering
+    \includegraphics[width=0.5\textwidth]{./Images/LinearAutoenc_Saddles.png}
+    \end{figure}
+In the auto-associative case, $\Sigma = \Sigma_{XX}$ and (8), (9) and (10) become:
+\begin{equation} \tag{8'}
+    A = U_{\mathcal{I}}C
+\end{equation}
+\begin{equation} \tag{9'}
+    B = C^{-1}U_{\mathcal{I}}^\intercal
+\end{equation}
+\begin{equation} \tag{10'}
+    W = P_{U_{\mathcal{I}}}
+\end{equation}
+and therefore the unique locally and globally optimal map $W$ is the orthogonal projection onto the subspace spanned by the first $p$ eigenvectors of $\Sigma_{XX}$ associated with the $p$ largest eigenvalues. 
+
+\emph{Remark}: at the global minimum, if $C$ is the identity $I_p$ then the activities of the units in the hidden layer are given by:
+\[
+    u_1^\intercal \hat{y}_n , \dots , u_p^\intercal \hat{y}_n    
+\]
+the so called \textbf{principal components} of the output data $\hat{y}$. In the auto-associative case, these activities are given by $u_1^\intercal x_n, \dots, u_p^\intercal x_n$, the principal components of the input data $x$. They are the coordinates of the vector $x_n$ along the first $p$ eigenvectors of $\Sigma_{XX}$.
+
+
+
+
+\subsubsection{Proof of fact 4}
+First notice that since $\Sigma$ is a real symmetric covariance matrix, it can always be written as $\Sigma = U\Lambda U^\intercal$ where $U$ is an orthogonal column matrix of eigenvectors of $\Sigma$ and $\Lambda$ is the diagonal matrix with non-increasing eigenvalues on its diagonal. Also if $\Sigma$ is full-rank, then $\Sigma_{XX},\Sigma_{XY},\Sigma_{YX}$ are full rank too. Now clearly if $A$ and $B$ satisfy (8) and (9) for some $C$ and some $\mathcal{I}$, then $A$ and $B$ are full rank $p$ and satisfy (3) and (5). Therefore they define a critical point of $E$. 
+
+For the converse , we have:
+\[
+P_{U^\intercal A} = U^\intercal A (A^\intercal UU^\intercal A)^{-1} A^\intercal U = U^\intercal A(A^\intercal A)^{-1} A^\intercal U = U^\intercal P_A U
+\]
+or, equivalently, $P_A = UP_{U^\intercal A} U^\intercal$. Hence (7) yields:
+\[
+    UP_{U^\intercal A}U^\intercal U\Lambda U^\intercal = P_A\Sigma = \Sigma P_A = U\Lambda U^\intercal U P_{U^\intercal A}U^\intercal 
+\]
+and so $P_{U^\intercal A}\Lambda = \Lambda P_{U^\intercal A}$. Since $\lambda_1 > \dots > \lambda_n > 0$, it is readily seen that $P_{U^\intercal A}$ is an orthogonal projector of rank $p$ and its eigenvalues are 1 ($p$ times) and 0 ($n-p$ times). Therefore there exists a unique index set $\mathcal{I} = {i_1, \dots, i_p}$ with $1 \leq i_1 < \dots < i_p \leq n$ such that $P_{U^\intercal A} = I_{\mathcal{I}}$, where $I_{\mathcal{I}}$ is the diagonal matrix with entry $i=1$ if $i \in \mathcal{I}$ and 0 otherwise. It follows that 
+\[
+  P_A = UP_{U^\intercal A}U^\intercal = U I_{\mathcal{I}} U^\intercal = U_{\mathcal{I}} U_{\mathcal{I}}^\intercal  
+\]
+where $U_{\mathcal{I}} = [u_{i_1}, \dots, u_{i_p}]$. Thus $P_A$ is the orthogonal projection onto the subspace spanned by the columns of $U_{\mathcal{I}}$. Since the column space of $A$ coincides with the column space of $U_{\mathcal{I}}$, there exists an invertible $p \times p$ matrix $C$ such that $A = U_{\mathcal{I}}C$.
+Moreover, $B = \hat{B}(A) = C^{-1}U_{\mathcal{I}}\Sigma_{YX}\Sigma_{XX}^{-1}$ and (8) and (9) are satisfied. There are $\binom{n}{p}$ possible choices for $\mathcal{I}$ and therefore $\binom{n}{p}$ possible critical points with full rank. From (8), (9) and (10) results immediately. 
+
+
+To prove (11), use (c) to write:
+\[
+    \begin{split}
+        E(A,B) &= (vec(Y - ABX))^\intercal(vec(Y - ABX))\\
+        &= vec(Y)^\intercal vec(Y) - 2(vec(ABX))^\intercal vec(Y) + vec(ABX)^\intercal vec(ABX)\\
+        &= tr(YY^\intercal) - 2tr(ABXY^\intercal) + tr(ABXX^\intercal B^\intercal A^\intercal)\\
+        &= tr(\Sigma_{YY}) - 2tr(W\Sigma_{XY}) + tr(W\Sigma_{XX}W^\intercal)\\
+    \end{split}
+\]
+If $A$ is full rank and $B = \hat{B}(A)$, then $W = AB(A) = P_A\Sigma_{YX}\Sigma{XX}^{-1}$ and therefore:
+\[
+    tr(W\Sigma_{XX}W^\intercal) = tr(P_A \Sigma P_A) = tr(P_A \Sigma) = tr(U P_{U^\intercal A} U^\intercal U \Lambda U^\intercal) =    
+\]  
+\[
+    = tr(P_{U^\intercal A} U^\intercal U \Lambda) = tr(P_{U^\intercal A} \Lambda) 
+\]
+and 
+\[
+    tr(W\Sigma_{YX}) = tr(P_A\Sigma) = tr(P_{U^\intercal A}\Lambda)    
+\]
+So, for an arbitrary $A$ of rank $p$:
+\[
+    E(A,\hat{B}(A)) = tr(\Sigma_{YY})  - tr(P_{U^\intercal A}\Lambda)
+\]
+If $A$ is of the form $U_{\mathcal{I}}C$, then $P_{U^\intercal A} = I_{\mathcal{I}}$, therefore:
+\[
+    E(A,\hat{B}(A)) = tr(\Sigma_{YY}) - tr(I_{\mathcal{I}}\Lambda) = tr(\Sigma_{YY}) - \sum_{i \in \mathcal{I}} \lambda_i
+\]
+which is (11). 
+
+We shall now establish that whenever $A$ and $B$ satisfy (8) and (9) with $\mathcal{I} = {1,  2, \dots, p}$ there exist matrices $\bar{A}$, $\bar{B}$ arbitrarily close to $A,B$ such that $E(\bar{A},\bar{B}) < E(A,B)$. For this purpose it is enough to slightly perturb the column space of $A$ in the direction of an eigenvector associated with one of the first $p$ eigenvalues of $\Sigma$ which is not contained in $\{\lambda_i, i \in \mathcal{I}\}$. More precisely, fix two indeces $j$ and $k$ with $j \in \mathcal{I}, k \not\in \mathcal{I}$. For any $\epsilon$, put:
+\[
+    \tilde{u}_j = (1+\epsilon^2)^{-\frac{1}{2}}(u_j + \epsilon u_k) = \dfrac{1}{\sqrt{1+\epsilon^2}}(u_j + \epsilon u_k) 
+\]
+and construct $\tilde{U}_\mathcal{I}$ from $U_\mathcal{I}$ by replacing $u_i$ with $\tilde{u}_j$. Since $k \not\in \mathcal{I}$, we still have $\tilde{U}^\intercal_\mathcal{I} \tilde{U}_\mathcal{I} = I_p$. Now let $\tilde{A} = \tilde{U}_\mathcal{I} C$ and
+\[
+    \tilde{B} = \hat{B}(\tilde{A}) = C^{-1}\tilde{U}^\intercal_\mathcal{I} \Sigma_{YX}\Sigma_{XX}^{-1}    
+\]
+A simple calculation shows that the diagonal elements of $P_{U^\intercal A}$ are:
+\[
+    \tilde{\delta}_i = 
+    \begin{cases}
+        0 & \text{if } i \not \in \mathcal{I} \cup \{k\}\\
+        1 & \text{if } i \in \mathcal{I} \text{ and } i \neq j \text{ and } i \neq k\\
+        \dfrac{1}{1+\epsilon^2} & \text{if } i = j\\
+        \dfrac{\epsilon^2}{1 + \epsilon^2} &\text{if } i = k
+    \end{cases}    
+\]
+Therefore:
+\[
+    \begin{split}
+        E(\tilde{A},\tilde{B}) &= tr(\Sigma_{YY}) - tr(P_{U^\intercal \tilde{A}}\Lambda)\\
+        &= tr
+    \end{split}    
+\]

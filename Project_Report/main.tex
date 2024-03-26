@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{tikz}
+\usepackage{multicol}
+\usetikzlibrary{fit}
+\newcommand{\overlay}[2][]{\tikz[overlay,
+  remember picture, #1]{#2}}
+\tikzset{
+  highlighted/.style = { draw, thick, rectangle,
+                         rounded corners, inner sep = 0pt,
+                         fill = red!15, fill opacity = 0.5
+                       }
+}
+\newcommand{\highlight}[1]{%
+  \overlay{
+    \node [fit = (left.north west) (right.south east),
+           highlighted] (#1) {}; }
+}
+\newcommand{\flag}[2]{\overlay[baseline=(#1.base)]
+  {\node (#1) {$#2$};}}
+
+% TODO
+% implementing in python the kronecker operator
+% also the vec operator
+% try to replicate fact1
+% checking the np-complete and np-hard problems
+% 
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\title{Autoencoders explained}
+\author{Lorenzo Bozzoni}
+\date{March 2024}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Autoencoders}
+Autoencoders are simple learning circuits which aim to transform inputs into outputs with
+the least possible amount of distortion. To derive a fairly general framework, an $n/p/n$  autoencoder is defined by a t-uple $n,p,m,\mathbb{F},\mathbb{G},\mathcal{A},\mathcal{B},\mathcal{X},\mathcal{Y}, \Delta$, where:
+\begin{itemize}
+    \item $\mathbb{F}$ and $\mathbb{G}$ are sets
+    \item $n$ and $p$ are positive integers
+    \item $\mathcal{A}$ is a class of functions from $\mathbb{G}^p$ to $\mathbb{F}^n$
+    \item $\mathcal{B}$ is a class of functions from $\mathbb{F}^n$ to $\mathbb{G}^p$
+    \item $\mathcal{X} = {x_1, \dots, x_m}$ is a set of $m$ (training) vectors in $\mathbb{F}^n$. When the external targets are present, we let $\mathcal{Y} = {y_1, \dots, y_m}$ denote the corresponding set of $m$ target vectors in $\mathbb{F}^n$ 
+    \item $\Delta$ is a dissimilarity or distortion function defined over $\mathbb{F}^n$
+\end{itemize}
+For any $A \in \mathcal{A}$ and $B \in \mathcal{B}$, the autoencoder transforms an input vector $x \in \mathbb{F}^n$ into an output vector $A \circ B(x) \in \mathbb{F}^n$. The corresponding \textbf{autoencoder problem} is to find $A \in \mathcal{A}$ and $B \in \mathcal{B}$ that minimize the overall distortion function:
+\begin{equation}
+    \min E(A,B) = \min_{A ,B} \sum_{t=1}^m E(A,B)=\min_{A ,B} \sum_{t=1}^m \Delta(x_t, A \circ B(x_t))
+\end{equation}
+In the non auto-associative case, when external targets $y_t$ are provided, the minimization
+problem becomes:
+\begin{equation}
+    \min E(A,B) = \min_{A ,B} \sum_{t=1}^m E(A,B)=\min_{A ,B} \sum_{t=1}^m \Delta(y_t, A \circ B(x_t))
+\end{equation}
+It is important to notice that if $p < n$ corresponds to a compression or feature extraction, while $p > n$ corresponds to a decompression. 
+
+\input{LinearAutoencoders}
+\input{BooleanAutoencoders.tex}
+
+
+\end{document}
