@@ -8,10 +8,8 @@ E = \sum_n \|y_n - F(x_n)\|^2
 where $F$ is the current function implemented by the network. We defined also the \textbf{covariance matrices}:
 \[
 \begin{split}
-    \Sigma_{XX} &= \sum_n x_n x_n^\intercal\\
-    \Sigma_{XY} &= \sum_n x_n y_n^\intercal\\
-    \Sigma_{YY} &= \sum_n y_n y_n^\intercal\\
-    \Sigma_{YX} &= \sum_n y_n x_n^\intercal\\
+    \Sigma_{XX} &= \sum_n x_n x_n^\intercal \hspace{1cm} \Sigma_{XY} = \sum_n x_n y_n^\intercal\\
+    \Sigma_{YY} &= \sum_n y_n y_n^\intercal \hspace{1cm} \Sigma_{YX} = \sum_n y_n x_n^\intercal\\
 \end{split}
 \]
 Where these quantities are defined. 
@@ -114,7 +112,25 @@ Since $Y=X$ so $\Sigma_{YX}\Sigma_{XX}^{-1} = I$.
     \]
     which is (2). If $A$ is full rank, $A^\intercal A$ is symmetric and positive definite. As a covariance matrix, $\Sigma_{XX}$ is symmetric and positive semidefinite; if, in addition, $\Sigma_{XX}$ is invertible, then $\Sigma_{XX}$ is also positive definite. Because of (h), $(X^\intercal  \otimes A)^\intercal (X^\intercal \otimes A) = \Sigma_{XX} \otimes A^\intercal A$ is also symmetric and positive definite. Applying the above lemma, we conclude that if $\Sigma_{XX}$ is invertible and A is a fixed full rank matrix, then $E$ is strictly convex in the coefficients of $B$ and attains its unique minimum at the unique solution $B = \hat{B}(A) = (A^\intercal A)^{-1}A^\intercal \Sigma_{YX} \Sigma_{XX}^{-1}$ of (2), which is (3). In the auto-associative case, $x_n = y_n$. Therefore $\Sigma_{XX} = \Sigma_{YX} = \Sigma_{YY} = \Sigma_{XY}$ and the above expression simplifies to (3').
     \end{proof}
-    
+
+\subsection{Fact 2}
+For any fixed $p \times n$ matrix $B$ the function $E(A,B)$ is convex in the coefficients of $A$ and attains its minimum for any $A$ satisfying the equation:
+\begin{equation} \tag{4}
+    AB\Sigma_{XX}B^\intercal= \Sigma_{YX}B^\intercal 
+\end{equation}
+If $\Sigma_{XX}$ is invertible and $B$ is full rank $p$, then $E$ is strictly convex and has a unique minimum reached when:
+\begin{equation} \tag{5}
+    A = \hat{A}(B) = \Sigma_{YX}B^\intercal (B\Sigma_{XX}B^\intercal)^{-1}
+\end{equation}
+In the auto-associative case, (5) becomes:
+\begin{equation} \tag{5'}
+    A = \hat{A}(B) = \Sigma_{XX}B^\intercal (B\Sigma_{XX}B^\intercal)^{-1}
+\end{equation}
+The proof is nearly identical to the proof of fact 1.
+
+
+
+
 \subsection{Fact 3}
 Assume that $\Sigma_{XX}$ is invertible. If two matrices $A$ and $B$ define a critical point of $E$ (i.e. a point where $\frac{\partial E}{\partial a_{ij}} = \frac{\partial E}{\partial b_{ij}} = 0$) then the global map $W = AB$ is of the form:
 \begin{equation} \tag{6}
@@ -124,7 +140,7 @@ with $A$ satisfying
 \begin{equation} \tag{7}
     P_A \Sigma = P_A \Sigma P_A = \Sigma P_A    
 \end{equation}
-Where $\Sigma = \Sigma_{YX} = \Sigma_{XX}^{-1} = \Sigma_{XY}$. Recall also, that the matrix $P_A$ is the matrix of the orthogonal projection onto the subspace spanned by the columns of $A$. In the auto-associative case, $\Sigma = \Sigma_{XX}$ and (6) and (7) become:
+Where $\Sigma = \Sigma_{YX} \Sigma_{XX}^{-1} \Sigma_{XY}$. Recall also, that the matrix $P_A$ is the matrix of the orthogonal projection onto the subspace spanned by the columns of $A$. In the auto-associative case, $\Sigma = \Sigma_{XX}$ and (6) and (7) become:
 \begin{equation} \tag{6'}
     W = AB = P_A
 \end{equation}
@@ -180,11 +196,11 @@ For such a critical point we have:
 \begin{equation} \tag{11}
     E(A,B) = tr(\Sigma_{YY}) - \sum_{i \in \mathcal{I}} \lambda_i
 \end{equation}
-Therefore a critical $W$ of rank $p$ is always the product of the ordinary least squares regression matrix followed by an orthogonal projection onto the subspace spanned by $p$ eigenvectors of $\Sigma$. The critical map $W$ associated with the index set ${1,2,\dots, p}$ is the unique local and global minimum of $E$. The remaining $\binom{n}{p} - 1$ $p$-index sets correspond to saddle points. All additional critical points defined by matrices $A$ and $B$ which are not full rank are also saddle points and can be characterized in terms of orthogonal projections onto subspaces spanned by $q$ eigenvectors of $\Sigma$ with $q < p$ (see Figure 1). 
+Therefore a critical $W$ of rank $p$ is always the product of the ordinary least squares regression matrix followed by an orthogonal projection onto the subspace spanned by $p$ eigenvectors of $\Sigma$. The critical map $W$ associated with the index set $\{1,2,\dots, p\}$ is the unique local and global minimum of $E$. The remaining $\binom{n}{p} - 1$ $p$-index sets correspond to saddle points. All additional critical points defined by matrices $A$ and $B$ which are not full rank are also saddle points and can be characterized in terms of orthogonal projections onto subspaces spanned by $q$ eigenvectors of $\Sigma$ with $q < p$ (see Figure 1). 
 \begin{figure}[H]
-    \caption{Landscape of $E$}
     \centering
     \includegraphics[width=0.5\textwidth]{./Images/LinearAutoenc_Saddles.png}
+    \caption{Landscape of $E$}
     \end{figure}
 In the auto-associative case, $\Sigma = \Sigma_{XX}$ and (8), (9) and (10) become:
 \begin{equation} \tag{8'}
