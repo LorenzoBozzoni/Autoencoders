@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{General framework}{3}{0}{1}
+\beamer@sectionintoc {2}{Linear autoencoders}{5}{0}{2}
+\beamer@sectionintoc {3}{Boolean autoencoders}{8}{0}{3}
+\beamer@sectionintoc {4}{Clustering complexity}{14}{0}{4}

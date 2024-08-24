@@ -294,6 +294,9 @@ Therefore:
 \[
     \begin{split}
         E(\tilde{A},\tilde{B}) &= tr(\Sigma_{YY}) - tr(P_{U^\intercal \tilde{A}}\Lambda)\\
-        &= tr
+        &= tr(\Sigma_{YY}) - \left[\right]
     \end{split}    
 \]
+
+\subsection{Equivalence of PCA and Autoencoders}
+In this section we show in detail the equivalence between the principal component analysis (PCA) and the linear autoencoder. We consider the case of centered data, that is, the mean of each column of the data matrix $X$ is zero. The covariance matrix of the data is then given by $\Sigma_{XX} = \frac{1}{N}XX^\intercal$. The principal component analysis consists in finding the orthogonal matrix $U$ such that the first $p$ columns of $U$ are the eigenvectors of $\Sigma_{XX}$ associated with the $p$ largest eigenvalues. The matrix $U$ is then used to project the data onto the subspace spanned by the first $p$ principal components. The linear autoencoder consists in finding the matrices $A$ and $B$ such that $W = AB$ is the orthogonal projection onto the subspace spanned by the first $p$ eigenvectors of $\Sigma_{XX}$ associated with the $p$ largest eigenvalues. The matrix $A$ is then used to project the data onto the subspace spanned by the first $p$ principal components.

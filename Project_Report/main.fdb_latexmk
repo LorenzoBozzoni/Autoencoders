@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1724312316.94746 "/home/lorenzobozzoni/Documenti/Polimi/PrimoAnno/PrimoSemestre/NumericalAnalysisForML/Autoencoders/Project_Report/main.tex" "main.pdf" "main" 1724312318.55028 0
+["pdflatex"] 1724486184.05382 "/home/lorenzobozzoni/Documenti/Polimi/PrimoAnno/PrimoSemestre/NumericalAnalysisForML/Autoencoders/Project_Report/main.tex" "main.pdf" "main" 1724486185.56425 0
   "/home/lorenzobozzoni/Documenti/Polimi/PrimoAnno/PrimoSemestre/NumericalAnalysisForML/Autoencoders/Project_Report/main.tex" 1724258517.63225 3062 5fbad43cb7db9b673b9649fcc431037a ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -179,11 +179,11 @@
   "Images/Hypercube4Dimensions.png" 1711649272.32797 2487 2a619ef5417a1cddf32abdf8ab79e7d3 ""
   "Images/LinearAutoenc_Saddles.png" 1710795919.3703 55454 b9de4224d2cd59932ab46920d391203c ""
   "Images/Manhattan_Voronoi_Diagram.png" 1711211865.89508 15795 45fc5b319f31575ae07cf2d5d858ed12 ""
-  "LinearAutoencoders.tex" 1724312316.67828 17815 03cf711e5eeea3547d83989aeb81cf76 ""
-  "main.aux" 1724312318.35729 2787 d81870e67571d15c6f1b91f6e011c370 "pdflatex"
-  "main.out" 1724312318.35829 2085 1f57dd640541c569d4efd6ff51be91b4 "pdflatex"
+  "LinearAutoencoders.tex" 1724486181.85095 18876 0aed5ed1a73c28156b5aab03d82bd3b3 ""
+  "main.aux" 1724486185.35496 2929 ef2e3fdf941f7b708ab05643cc881da1 "pdflatex"
+  "main.out" 1724486185.35596 2330 70f36499ec0026204043c7df90853ca4 "pdflatex"
   "main.tex" 1724258517.63225 3062 5fbad43cb7db9b673b9649fcc431037a ""
-  "main.toc" 1724312318.35929 1163 19394ebd6def4cd4771fdef31822652c "pdflatex"
+  "main.toc" 1724486185.35696 1264 41698b0f5f5ef644a74529b6acab8b2f "pdflatex"
   (generated)
   "main.aux"
   "main.log"

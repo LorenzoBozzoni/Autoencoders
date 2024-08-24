@@ -8,6 +8,7 @@
 \contentsline {subsubsection}{\numberline {2.4.1}Proof of fact 3}{6}{subsubsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.5}Fact 4}{6}{subsection.2.5}%
 \contentsline {subsubsection}{\numberline {2.5.1}Proof of fact 4}{7}{subsubsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.6}Equivalence of PCA and Autoencoders}{9}{subsection.2.6}%
 \contentsline {section}{\numberline {3}Boolean Autoencoders}{9}{section.3}%
 \contentsline {section}{\numberline {4}Clustering complexity on the hypercube}{12}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Brief recap on computational complexity}{12}{subsection.4.1}%
