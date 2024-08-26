@@ -12,7 +12,9 @@ where $F$ is the current function implemented by the network. We defined also th
     \Sigma_{YY} &= \sum_n y_n y_n^\intercal \hspace{1cm} \Sigma_{YX} = \sum_n y_n x_n^\intercal\\
 \end{split}
 \]
-Where these quantities are defined. 
+Where these quantities are defined. \\
+
+Of course the aim is not trivially to minimize the error function, since this would be simply solved by choosing as global mapping $W = AB = I$, but rather to find $W$ such that, having a smaller rank, it performs a good compression of the input data.
 
 \subsection{Useful mathematical concepts}
 For any matrices $P, Q, R$ we have $tr(PQR) = tr(RPQ) = tr(QRP)$ provided that these quantities are defined. Thus in particolar if $P$ is \textbf{idempotent}, that is, $P^2 = P$, then:
@@ -298,5 +300,50 @@ Therefore:
     \end{split}    
 \]
 
-\subsection{Equivalence of PCA and Autoencoders}
+\subsection{Equivalence with PCA}
 In this section we show in detail the equivalence between the principal component analysis (PCA) and the linear autoencoder. We consider the case of centered data, that is, the mean of each column of the data matrix $X$ is zero. The covariance matrix of the data is then given by $\Sigma_{XX} = \frac{1}{N}XX^\intercal$. The principal component analysis consists in finding the orthogonal matrix $U$ such that the first $p$ columns of $U$ are the eigenvectors of $\Sigma_{XX}$ associated with the $p$ largest eigenvalues. The matrix $U$ is then used to project the data onto the subspace spanned by the first $p$ principal components. The linear autoencoder consists in finding the matrices $A$ and $B$ such that $W = AB$ is the orthogonal projection onto the subspace spanned by the first $p$ eigenvectors of $\Sigma_{XX}$ associated with the $p$ largest eigenvalues. The matrix $A$ is then used to project the data onto the subspace spanned by the first $p$ principal components.
+
+
+We are now going to show that if we fix a linear decoder and a squared error loss, the optimal solution is obtained when using a linear encoder. We denote:
+\begin{itemize}
+    \item $X = [x_1, \dots, x_m]$ the data matrix
+    \item $W^*$ the fixed linear decoder matrix
+    \item $W$ the linear encoder matrix
+    \item $H = XW$ the hidden layer
+\end{itemize}
+The aim is to minimize the recontruction error, i.e. the difference between the input data and the output data which can be written as:
+\[
+    \min_{\theta} \sum_{i=1}^m \sum_{j=1}^n (x_{ij} - \hat{x}_{ij})^2 \hspace{0.3cm} \equiv \hspace{0.3cm} \min_{HW^*} (\|X - HW^*\|_F)^2
+\]
+But the problem of finding a matrix with minimum distance to another matrix is trivial since the \textbf{Eckart-Young theorem} guarantees that:\\
+\begin{theorem}
+For either $||\cdot||_F$, $||\cdot||_2$ we have:
+\[
+    ||A - A_k|| \leq ||A - B|| \hspace{1cm} \forall B \text{ of rank } k
+\]
+\end{theorem}
+So, if the hidden layer of the autoencoder is $k$, the optimal solution is the truncated SVD:
+\[
+    HW^* = U_{:,\leq k}\Sigma_{k,k}V_{:,\leq k}^\intercal
+\]
+By matching variables one possible solution is:
+\[
+    H = U_{:,\leq k}\Sigma_{k,k} \hspace{0.5cm} W^* = V_{:,\leq k}^\intercal
+\]
+We are now going to show that $H$ is a linear encoding and find an expression for the encoder weights $W$:
+\begin{proof}
+    \begin{align*}
+        H &= U_{:,\leq k}\Sigma_{k,k} \\
+        &= (XX^T)(XX^T)^{-1}U_{:,\leq K}\Sigma_{k,k} \qquad &\text{(pre-multiplying $(XX^T)(XX^T)^{-1} = I$)} \\
+        &= (XV\Sigma^T U^T)(U\Sigma V^T V\Sigma^T U^T)^{-1}U_{:,\leq k}\Sigma_{k,k} \qquad &\text{(using $X = U\Sigma V^T$)} \\
+        &= XV\Sigma^T U^T(U\Sigma\Sigma^T U^T)^{-1}U_{:,\leq k}\Sigma_{k,k} \qquad &(V^T V = I) \\
+        &= XV\Sigma^T U^T U(\Sigma\Sigma^T)^{-1}U^T U_{:,\leq k}\Sigma_{k,k} \qquad &((ABC)^{-1} = C^{-1}B^{-1}A^{-1}) \\
+        &= XV\Sigma^T (\Sigma\Sigma^T)^{-1}U^T U_{:,\leq k}\Sigma_{k,k} \qquad &(U^T U = I) \\
+        &= XV\Sigma^T \Sigma^{T^{-1}}\Sigma^{-1}U^T U_{:,\leq k}\Sigma_{k,k} \qquad &((AB)^{-1} = B^{-1}A^{-1}) \\
+        &= XV\Sigma^{-1} I_{:,\leq k}\Sigma_{k,k} \qquad &(U^T U_{:,\leq k} = I_{:,\leq k}) \\
+        &= XV I_{:,\leq k} \qquad &(\Sigma^{-1} I_{:,\leq k} = \Sigma_{k,k}^{-1}) \\
+        H &= XV_{:,\leq k}
+        \end{align*}
+
+        Thus $H$ is a linear transformation of $X$ and $W = V_{:,\leq k}$. The encoder matrix is the matrix of the first $k$ eigenvectors of the data covariance matrix. This means that the hidden layer of the autoencoder is just the principal component analysis of the data.  
+\end{proof}

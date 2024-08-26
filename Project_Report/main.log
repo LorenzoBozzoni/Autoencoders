@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.18)  24 AUG 2024 09:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.18)  26 AUG 2024 10:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -247,12 +247,29 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
 \Hy@SectionHShift=\skip60
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count290
+\Gm@cntv=\count291
+\c@Gm@tempcnt=\count292
+\Gm@bindingoffset=\dimen164
+\Gm@wd@mp=\dimen165
+\Gm@odd@mp=\dimen166
+\Gm@even@mp=\dimen167
+\Gm@layoutwidth=\dimen168
+\Gm@layoutheight=\dimen169
+\Gm@layouthoffset=\dimen170
+\Gm@layoutvoffset=\dimen171
+\Gm@dimlist=\toks30
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count290
-\float@exts=\toks30
+\c@float@type=\count293
+\float@exts=\toks31
 \float@box=\box54
-\@float@everytoks=\toks31
+\@float@everytoks=\toks32
 \@floatcapt=\box55
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
@@ -267,12 +284,12 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen164
-\Gin@req@width=\dimen165
+\Gin@req@height=\dimen172
+\Gin@req@width=\dimen173
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks32
-\pgfutil@tempdima=\dimen166
-\pgfutil@tempdimb=\dimen167
+\pgfutil@everybye=\toks33
+\pgfutil@tempdima=\dimen174
+\pgfutil@tempdimb=\dimen175
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box56
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/pgf.revision.tex)
@@ -282,31 +299,31 @@ Package: pgf 2023-01-15 v3.1.10 (3.1.10)
  (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
  (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks33
-\pgfkeys@temptoks=\toks34
+\pgfkeys@pathtoks=\toks34
+\pgfkeys@temptoks=\toks35
  (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks35
+\pgfkeys@tmptoks=\toks36
 ))
-\pgf@x=\dimen168
-\pgf@y=\dimen169
-\pgf@xa=\dimen170
-\pgf@ya=\dimen171
-\pgf@xb=\dimen172
-\pgf@yb=\dimen173
-\pgf@xc=\dimen174
-\pgf@yc=\dimen175
-\pgf@xd=\dimen176
-\pgf@yd=\dimen177
+\pgf@x=\dimen176
+\pgf@y=\dimen177
+\pgf@xa=\dimen178
+\pgf@ya=\dimen179
+\pgf@xb=\dimen180
+\pgf@yb=\dimen181
+\pgf@xc=\dimen182
+\pgf@yc=\dimen183
+\pgf@xd=\dimen184
+\pgf@yd=\dimen185
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count291
-\c@pgf@countb=\count292
-\c@pgf@countc=\count293
-\c@pgf@countd=\count294
-\t@pgf@toka=\toks36
-\t@pgf@tokb=\toks37
-\t@pgf@tokc=\toks38
-\pgf@sys@id@count=\count295
+\c@pgf@counta=\count294
+\c@pgf@countb=\count295
+\c@pgf@countc=\count296
+\c@pgf@countd=\count297
+\t@pgf@toka=\toks37
+\t@pgf@tokb=\toks38
+\t@pgf@tokc=\toks39
+\pgf@sys@id@count=\count298
  (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -317,8 +334,8 @@ File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 ))) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count296
-\pgfsyssoftpath@bigbuffer@items=\count297
+\pgfsyssoftpath@smallbuffer@items=\count299
+\pgfsyssoftpath@bigbuffer@items=\count300
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )) (/usr/local/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -340,52 +357,52 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
  (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen178
-\pgfmath@count=\count298
+\pgfmath@dimen=\dimen186
+\pgfmath@count=\count301
 \pgfmath@box=\box57
-\pgfmath@toks=\toks39
-\pgfmath@stack@operand=\toks40
-\pgfmath@stack@operation=\toks41
+\pgfmath@toks=\toks40
+\pgfmath@stack@operand=\toks41
+\pgfmath@stack@operation=\toks42
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count299
+\c@pgfmathroundto@lastzeros=\count302
 )) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen179
-\pgf@picmaxx=\dimen180
-\pgf@picminy=\dimen181
-\pgf@picmaxy=\dimen182
-\pgf@pathminx=\dimen183
-\pgf@pathmaxx=\dimen184
-\pgf@pathminy=\dimen185
-\pgf@pathmaxy=\dimen186
-\pgf@xx=\dimen187
-\pgf@xy=\dimen188
-\pgf@yx=\dimen189
-\pgf@yy=\dimen190
-\pgf@zx=\dimen191
-\pgf@zy=\dimen192
+\pgf@picminx=\dimen187
+\pgf@picmaxx=\dimen188
+\pgf@picminy=\dimen189
+\pgf@picmaxy=\dimen190
+\pgf@pathminx=\dimen191
+\pgf@pathmaxx=\dimen192
+\pgf@pathminy=\dimen193
+\pgf@pathmaxy=\dimen194
+\pgf@xx=\dimen195
+\pgf@xy=\dimen196
+\pgf@yx=\dimen197
+\pgf@yy=\dimen198
+\pgf@zx=\dimen199
+\pgf@zy=\dimen256
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen193
-\pgf@path@lasty=\dimen194
+\pgf@path@lastx=\dimen257
+\pgf@path@lasty=\dimen258
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen195
-\pgf@shorten@start@additional=\dimen196
+\pgf@shorten@end@additional=\dimen259
+\pgf@shorten@start@additional=\dimen260
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box58
 \pgf@hbox=\box59
 \pgf@layerbox@main=\box60
-\pgf@picture@serial@count=\count300
+\pgf@picture@serial@count=\count303
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen197
+\pgflinewidth=\dimen261
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen198
-\pgf@pt@y=\dimen199
-\pgf@pt@temp=\dimen256
+\pgf@pt@x=\dimen262
+\pgf@pt@y=\dimen263
+\pgf@pt@temp=\dimen264
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
@@ -394,12 +411,12 @@ File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen257
+\pgfarrowsep=\dimen265
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen258
-\pgf@sys@shading@range@num=\count301
-\pgf@shadingcount=\count302
+\pgf@max=\dimen266
+\pgf@sys@shading@range@num=\count304
+\pgf@shadingcount=\count305
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
@@ -420,68 +437,68 @@ File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen259
-\pgf@nodesepend=\dimen260
+\pgf@nodesepstart=\dimen267
+\pgf@nodesepend=\dimen268
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 )) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen261
-\pgffor@skip=\dimen262
-\pgffor@stack=\toks42
-\pgffor@toks=\toks43
+\pgffor@iter=\dimen269
+\pgffor@skip=\dimen270
+\pgffor@stack=\toks43
+\pgffor@toks=\toks44
 )) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
  (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count303
-\pgfplotmarksize=\dimen263
+\pgf@plot@mark@count=\count306
+\pgfplotmarksize=\dimen271
 )
-\tikz@lastx=\dimen264
-\tikz@lasty=\dimen265
-\tikz@lastxsaved=\dimen266
-\tikz@lastysaved=\dimen267
-\tikz@lastmovetox=\dimen268
-\tikz@lastmovetoy=\dimen269
-\tikzleveldistance=\dimen270
-\tikzsiblingdistance=\dimen271
+\tikz@lastx=\dimen272
+\tikz@lasty=\dimen273
+\tikz@lastxsaved=\dimen274
+\tikz@lastysaved=\dimen275
+\tikz@lastmovetox=\dimen276
+\tikz@lastmovetoy=\dimen277
+\tikzleveldistance=\dimen278
+\tikzsiblingdistance=\dimen279
 \tikz@figbox=\box63
 \tikz@figbox@bg=\box64
 \tikz@tempbox=\box65
 \tikz@tempbox@bg=\box66
-\tikztreelevel=\count304
-\tikznumberofchildren=\count305
-\tikznumberofcurrentchild=\count306
-\tikz@fig@count=\count307
+\tikztreelevel=\count307
+\tikznumberofchildren=\count308
+\tikznumberofcurrentchild=\count309
+\tikz@fig@count=\count310
  (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count308
-\pgfmatrixcurrentcolumn=\count309
-\pgf@matrix@numberofcolumns=\count310
+\pgfmatrixcurrentrow=\count311
+\pgfmatrixcurrentcolumn=\count312
+\pgf@matrix@numberofcolumns=\count313
 )
-\tikz@expandcount=\count311
+\tikz@expandcount=\count314
  (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
-\c@tracingmulticols=\count312
+\c@tracingmulticols=\count315
 \mult@box=\box67
-\multicol@leftmargin=\dimen272
-\c@unbalance=\count313
-\c@collectmore=\count314
-\doublecol@number=\count315
-\multicoltolerance=\count316
-\multicolpretolerance=\count317
-\full@width=\dimen273
-\page@free=\dimen274
-\premulticols=\dimen275
-\postmulticols=\dimen276
+\multicol@leftmargin=\dimen280
+\c@unbalance=\count316
+\c@collectmore=\count317
+\doublecol@number=\count318
+\multicoltolerance=\count319
+\multicolpretolerance=\count320
+\full@width=\dimen281
+\page@free=\dimen282
+\premulticols=\dimen283
+\postmulticols=\dimen284
 \multicolsep=\skip61
 \multicolbaselineskip=\skip62
 \partial@page=\box68
 \last@line=\box69
 \mc@boxedresult=\box70
-\maxbalancingoverflow=\dimen277
+\maxbalancingoverflow=\dimen285
 \mult@rightbox=\box71
 \mult@grightbox=\box72
 \mult@firstbox=\box73
@@ -522,440 +539,460 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \@tempa=\box108
 \@tempa=\box109
 \@tempa=\box110
-\c@minrows=\count318
-\c@columnbadness=\count319
-\c@finalcolumnbadness=\count320
-\last@try=\dimen278
-\multicolovershoot=\dimen279
-\multicolundershoot=\dimen280
+\c@minrows=\count321
+\c@columnbadness=\count322
+\c@finalcolumnbadness=\count323
+\last@try=\dimen286
+\multicolovershoot=\dimen287
+\multicolundershoot=\dimen288
 \mult@nat@firstbox=\box111
 \colbreak@box=\box112
-\mc@col@check@num=\count321
+\mc@col@check@num=\count324
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
 File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-\c@theorem=\count322
-\c@corollary=\count323
+\c@theorem=\count325
+\c@corollary=\count326
  (/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count324
+\l__color_backend_stack_int=\count327
 \l__pdf_internal_box=\box113
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-Package hyperref Info: Link coloring OFF on input line 43.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+Package hyperref Info: Link coloring OFF on input line 44.
  (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
- (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 443.57848pt, 85.35826pt)
+* v-part:(T,H,B)=(95.39737pt, 556.47656pt, 143.09605pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=443.57848pt
+* \textheight=556.47656pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-13.87262pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count325
-\scratchdimen=\dimen281
+\scratchcounter=\count328
+\scratchdimen=\dimen289
 \scratchbox=\box114
-\nofMPsegments=\count326
-\nofMParguments=\count327
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count328
-\MPscratchDim=\dimen282
-\MPnumerator=\count329
-\makeMPintoPDFobject=\count330
-\everyMPtoPDFconversion=\toks45
+\nofMPsegments=\count329
+\nofMParguments=\count330
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count331
+\MPscratchDim=\dimen290
+\MPnumerator=\count332
+\makeMPintoPDFobject=\count333
+\everyMPtoPDFconversion=\toks46
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
+ [1
 
-Overfull \hbox (9.5596pt too wide) in paragraph at lines 49--51
-\OT1/cmr/m/n/10 frame-work, an $\OML/cmm/m/it/10 n=p=n$ \OT1/cmr/m/n/10 au-toen-coder is de-fined by a t-uple $\OML/cmm/m/it/10 n; p; m; \U/msb/m/n/10 F\OML/cmm/m/it/10 ; \U/msb/m/n/10 G\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 A\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 B\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 X\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 Y\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 ^^A$,
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (./LinearAutoencoders.tex
+Underfull \hbox (badness 10000) in paragraph at lines 14--16
+
  []
 
-[1
-
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (./LinearAutoencoders.tex [2] [3
+[2] [3
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.71 \end{equation}
+l.73 \end{equation}
                    
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.71 \end{equation}
+l.73 \end{equation}
                    
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.71 \end{equation}
+l.73 \end{equation}
                    
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.71 \end{equation}
+l.73 \end{equation}
                    
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.71 \end{equation}
+l.73 \end{equation}
                    
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.71 \end{equation}
+l.73 \end{equation}
                    ] [4
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.114     \end{proof}
-                     
+l.122 \end{equation}
+                    
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.114     \end{proof}
-                     ]
+l.122 \end{equation}
+                    ]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.118 \begin{equation}
-                       \tag{4}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.118 \begin{equation}
-                       \tag{4}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.118 \begin{equation}
-                       \tag{4}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.118 \begin{equation}
-                       \tag{4}
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.122 \begin{equation}
+l.124 \begin{equation}
                        \tag{5}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.122 \begin{equation}
+l.124 \begin{equation}
                        \tag{5}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.122 \begin{equation}
+l.124 \begin{equation}
                        \tag{5}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.122 \begin{equation}
+l.124 \begin{equation}
                        \tag{5}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.126 \begin{equation}
+l.128 \begin{equation}
                        \tag{5'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.126 \begin{equation}
+l.128 \begin{equation}
                        \tag{5'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.126 \begin{equation}
+l.128 \begin{equation}
                        \tag{5'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.126 \begin{equation}
+l.128 \begin{equation}
                        \tag{5'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.136 \begin{equation}
+l.138 \begin{equation}
                        \tag{6}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.136 \begin{equation}
+l.138 \begin{equation}
                        \tag{6}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.136 \begin{equation}
+l.138 \begin{equation}
                        \tag{6}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.136 \begin{equation}
+l.138 \begin{equation}
                        \tag{6}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.140 \begin{equation}
+l.142 \begin{equation}
                        \tag{7}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.140 \begin{equation}
+l.142 \begin{equation}
                        \tag{7}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.140 \begin{equation}
+l.142 \begin{equation}
                        \tag{7}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.140 \begin{equation}
+l.142 \begin{equation}
                        \tag{7}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.144 \begin{equation}
+l.146 \begin{equation}
                        \tag{6'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.144 \begin{equation}
+l.146 \begin{equation}
                        \tag{6'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.144 \begin{equation}
+l.146 \begin{equation}
                        \tag{6'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.144 \begin{equation}
+l.146 \begin{equation}
                        \tag{6'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.147 \begin{equation}
+l.149 \begin{equation}
                        \tag{7'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.147 \begin{equation}
+l.149 \begin{equation}
                        \tag{7'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.147 \begin{equation}
+l.149 \begin{equation}
                        \tag{7'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.147 \begin{equation}
-                       \tag{7'} [5]
+l.149 \begin{equation}
+                       \tag{7'} [5
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.173     \]
+            ]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.185 \begin{equation}
+l.187 \begin{equation}
                        \tag{8}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.185 \begin{equation}
+l.187 \begin{equation}
                        \tag{8}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.185 \begin{equation}
+l.187 \begin{equation}
                        \tag{8}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.185 \begin{equation}
+l.187 \begin{equation}
                        \tag{8}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.188 \begin{equation}
+l.190 \begin{equation}
                        \tag{9}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.188 \begin{equation}
+l.190 \begin{equation}
                        \tag{9}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.188 \begin{equation}
+l.190 \begin{equation}
                        \tag{9}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.188 \begin{equation}
+l.190 \begin{equation}
                        \tag{9}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.193 \begin{equation}
+l.195 \begin{equation}
                        \tag{10}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.193 \begin{equation}
+l.195 \begin{equation}
                        \tag{10}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.193 \begin{equation}
+l.195 \begin{equation}
                        \tag{10}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.193 \begin{equation}
+l.195 \begin{equation}
                        \tag{10}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.196 \begin{equation}
+l.198 \begin{equation}
                        \tag{11}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.196 \begin{equation}
+l.198 \begin{equation}
                        \tag{11}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.196 \begin{equation}
+l.198 \begin{equation}
                        \tag{11}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.196 \begin{equation}
+l.198 \begin{equation}
                        \tag{11}
-<./Images/LinearAutoenc_Saddles.png, id=140, 1209.51875pt x 793.96625pt>
+<./Images/LinearAutoenc_Saddles.png, id=145, 1209.51875pt x 793.96625pt>
 File: ./Images/LinearAutoenc_Saddles.png Graphic file (type png)
 <use ./Images/LinearAutoenc_Saddles.png>
-Package pdftex.def Info: ./Images/LinearAutoenc_Saddles.png  used on input line 202.
-(pdftex.def)             Requested size: 172.5pt x 113.22617pt.
+Package pdftex.def Info: ./Images/LinearAutoenc_Saddles.png  used on input line 204.
+(pdftex.def)             Requested size: 221.78923pt x 145.58516pt.
  [6]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.206 \begin{equation}
+l.208 \begin{equation}
                        \tag{8'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.206 \begin{equation}
+l.208 \begin{equation}
                        \tag{8'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.206 \begin{equation}
+l.208 \begin{equation}
                        \tag{8'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.206 \begin{equation}
+l.208 \begin{equation}
                        \tag{8'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.209 \begin{equation}
+l.211 \begin{equation}
                        \tag{9'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.209 \begin{equation}
+l.211 \begin{equation}
                        \tag{9'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.209 \begin{equation}
+l.211 \begin{equation}
                        \tag{9'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.209 \begin{equation}
+l.211 \begin{equation}
                        \tag{9'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.212 \begin{equation}
+l.214 \begin{equation}
                        \tag{10'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.212 \begin{equation}
+l.214 \begin{equation}
                        \tag{10'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.212 \begin{equation}
+l.214 \begin{equation}
                        \tag{10'}
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.212 \begin{equation}
+l.214 \begin{equation}
                        \tag{10'} [7
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.228 
-       <./Images/LinearAutoenc_Saddles.png>] [8]) (./BooleanAutoencoders.tex [9]
-Overfull \hbox (34.16866pt too wide) detected at line 57
-[] \OT1/cmr/m/n/10 ^^A([](\OML/cmm/m/it/10 p\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; p[]\OT1/cmr/m/n/10 ) = [] [] ^^A([](\OML/cmm/m/it/10 p\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 ; p[]\OT1/cmr/m/n/10 ) = [] []
+l.242 \]
+         <./Images/LinearAutoenc_Saddles.png>] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 317--319
+
  []
 
-[10]
-<./Images/Euclidean_Voronoi_diagram.png, id=177, 575.14874pt x 575.14874pt>
+[9]) (./BooleanAutoencoders.tex [10] [11]
+<./Images/Euclidean_Voronoi_diagram.png, id=187, 575.14874pt x 575.14874pt>
 File: ./Images/Euclidean_Voronoi_diagram.png Graphic file (type png)
 <use ./Images/Euclidean_Voronoi_diagram.png>
 Package pdftex.def Info: ./Images/Euclidean_Voronoi_diagram.png  used on input line 71.
-(pdftex.def)             Requested size: 103.50105pt x 103.49597pt.
-<./Images/Manhattan_Voronoi_Diagram.png, id=178, 575.14874pt x 575.14874pt>
+(pdftex.def)             Requested size: 133.07489pt x 133.07127pt.
+<./Images/Manhattan_Voronoi_Diagram.png, id=188, 575.14874pt x 575.14874pt>
 File: ./Images/Manhattan_Voronoi_Diagram.png Graphic file (type png)
 <use ./Images/Manhattan_Voronoi_Diagram.png>
 Package pdftex.def Info: ./Images/Manhattan_Voronoi_Diagram.png  used on input line 78.
-(pdftex.def)             Requested size: 103.50105pt x 103.49597pt.
-<./Images/Hypercube4Dimensions.png, id=179, 404.51125pt x 293.095pt>
+(pdftex.def)             Requested size: 133.07489pt x 133.07127pt.
+<./Images/Hypercube4Dimensions.png, id=189, 404.51125pt x 293.095pt>
 File: ./Images/Hypercube4Dimensions.png Graphic file (type png)
 <use ./Images/Hypercube4Dimensions.png>
 Package pdftex.def Info: ./Images/Hypercube4Dimensions.png  used on input line 99.
-(pdftex.def)             Requested size: 172.5pt x 124.98634pt.
- [11
+(pdftex.def)             Requested size: 221.78923pt x 160.70184pt.
+ [12
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -970,44 +1007,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
-) (./ClusteringComplexity.tex [12
+) (./ClusteringComplexity.tex [13
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.9 
-     <./Images/Hypercube4Dimensions.png>]
-Overfull \vbox (17.55507pt too high) has occurred while \output is active []
+l.15 A
+       graph is cubical if it is the subgraph of some hypercube $\mathbb{H}^... <./Images/Hypercube4Dimensions.png>]
+Overfull \hbox (1.1387pt too wide) in paragraph at lines 25--26
+[]\OT1/cmr/bx/it/10 Output: $\OML/cmm/m/it/10 k$ \OT1/cmr/m/it/10 bi-nary vec-tors $\OML/cmm/m/it/10 c[]; [] ; c[]$ \OT1/cmr/m/it/10 of length $\OML/cmm/m/it/10 n$ \OT1/cmr/m/it/10 (the cen-troids) and a func-tion $\OML/cmm/m/it/10 f$ \OT1/cmr/m/it/10 from $\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 x[]; [] ; x[]\OMS/cmsy/m/n/10 g$
+ []
 
-
-Overfull \vbox (17.55507pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (38.0238pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (38.0238pt too high) has occurred while \output is active []
-
- [13]) [14] (./main.aux)
+[14]) (./OvercompleteAutoencoders.tex
+<./Images/Overcomplete_autoencoders.png, id=215, 991.705pt x 656.4525pt>
+File: ./Images/Overcomplete_autoencoders.png Graphic file (type png)
+<use ./Images/Overcomplete_autoencoders.png>
+Package pdftex.def Info: ./Images/Overcomplete_autoencoders.png  used on input line 9.
+(pdftex.def)             Requested size: 177.42868pt x 117.44516pt.
+) [15
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.79 \end{document}
+                    <./Images/Overcomplete_autoencoders.png>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 70F36499EC0026204043C7DF90853CA4;2330.
+(rerunfilecheck)             Checksum: C90AAAA1078EEF45A0F104EC73E41A79;2421.
  ) 
 Here is how much of TeX's memory you used:
- 21209 strings out of 474104
- 393178 string characters out of 5743473
- 1945493 words of memory out of 5000000
- 43155 multiletter control sequences out of 15000+600000
+ 21710 strings out of 474104
+ 401173 string characters out of 5743473
+ 1944493 words of memory out of 5000000
+ 43643 multiletter control sequences out of 15000+600000
  567670 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,17n,93p,1180b,815s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,17n,93p,1180b,809s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (14 pages, 374589 bytes).
+Output written on main.pdf (15 pages, 416033 bytes).
 PDF statistics:
- 311 PDF objects out of 1000 (max. 8388607)
- 244 compressed objects within 3 object streams
- 68 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 324 PDF objects out of 1000 (max. 8388607)
+ 254 compressed objects within 3 object streams
+ 72 named destinations out of 1000 (max. 500000)
+ 166 words of extra memory for PDF output out of 10000 (max. 10000000)
 

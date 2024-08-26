@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1724486184.05382 "/home/lorenzobozzoni/Documenti/Polimi/PrimoAnno/PrimoSemestre/NumericalAnalysisForML/Autoencoders/Project_Report/main.tex" "main.pdf" "main" 1724486185.56425 0
-  "/home/lorenzobozzoni/Documenti/Polimi/PrimoAnno/PrimoSemestre/NumericalAnalysisForML/Autoencoders/Project_Report/main.tex" 1724258517.63225 3062 5fbad43cb7db9b673b9649fcc431037a ""
+["pdflatex"] 1724662167.86119 "/home/lorenzobozzoni/Documenti/Polimi/PrimoAnno/PrimoSemestre/NumericalAnalysisForML/Autoencoders/Project_Report/main.tex" "main.pdf" "main" 1724662170.39389 0
+  "/home/lorenzobozzoni/Documenti/Polimi/PrimoAnno/PrimoSemestre/NumericalAnalysisForML/Autoencoders/Project_Report/main.tex" 1724661549.52853 3417 13599d7e35489218f522f55e83cd2d18 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -54,6 +54,7 @@
   "/usr/local/texlive/2024/texmf-dist/tex/generic/bitset/bitset.sty" 1576016050 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty" 1576625223 8371 9d55b8bd010bc717624922fb3477d92e ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty" 1644112042 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
+  "/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty" 1572645307 1057 525c2192b5febbd8c1f662c9468335bb ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.sty" 1575499628 8356 7bbb2c2373aa810be568c29e333da8ed ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/intcalc/intcalc.sty" 1576625065 31769 002a487f55041f8e805cfbf6385ffd97 ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty" 1576878844 5412 d5a2436094cd7be85769db90f29250a6 ""
@@ -133,6 +134,7 @@
   "/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1601931149 46845 3b58f70c6e861a13d927bff09d35ecbc ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty" 1137110151 6749 16d2656a1984957e674b149555f1ea1d ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty" 1578002852 41601 9cf6c5257b1bc7af01a58859749dd37a ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1459978653 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1465944070 1224 978390e9c2234eab29404bc21b268d1e ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def" 1663965824 19448 1e988b341dda20961a6b931bcde55519 ""
@@ -179,11 +181,13 @@
   "Images/Hypercube4Dimensions.png" 1711649272.32797 2487 2a619ef5417a1cddf32abdf8ab79e7d3 ""
   "Images/LinearAutoenc_Saddles.png" 1710795919.3703 55454 b9de4224d2cd59932ab46920d391203c ""
   "Images/Manhattan_Voronoi_Diagram.png" 1711211865.89508 15795 45fc5b319f31575ae07cf2d5d858ed12 ""
-  "LinearAutoencoders.tex" 1724486181.85095 18876 0aed5ed1a73c28156b5aab03d82bd3b3 ""
-  "main.aux" 1724486185.35496 2929 ef2e3fdf941f7b708ab05643cc881da1 "pdflatex"
-  "main.out" 1724486185.35596 2330 70f36499ec0026204043c7df90853ca4 "pdflatex"
-  "main.tex" 1724258517.63225 3062 5fbad43cb7db9b673b9649fcc431037a ""
-  "main.toc" 1724486185.35696 1264 41698b0f5f5ef644a74529b6acab8b2f "pdflatex"
+  "Images/Overcomplete_autoencoders.png" 1724661988.85997 41913 0af1a8083b51e225f48561e6d64d76b5 ""
+  "LinearAutoencoders.tex" 1724661340.54132 21723 1a849da4f50eff4c16ccbc04ee3dc8e3 ""
+  "OvercompleteAutoencoders.tex" 1724662167.52365 1776 7ca672cf33e49c8ca55ecfd3782a5363 ""
+  "main.aux" 1724662170.13067 3184 0a78be3733fb150f45e9f614ba272849 "pdflatex"
+  "main.out" 1724662170.13167 2421 c90aaaa1078eef45a0f104ec73e41a79 "pdflatex"
+  "main.tex" 1724661549.52853 3417 13599d7e35489218f522f55e83cd2d18 ""
+  "main.toc" 1724662170.13267 1332 1222834eb71f6fdb0cd696ec410f200a "pdflatex"
   (generated)
   "main.aux"
   "main.log"

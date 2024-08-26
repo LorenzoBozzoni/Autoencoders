@@ -4,6 +4,7 @@
 \usepackage{amsthm}
 \usepackage{mathtools}
 \usepackage{hyperref}
+\usepackage[left=3cm,right=3cm]{geometry}
 \usepackage{float}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{tikz}
@@ -38,11 +39,14 @@
 
 \title{Autoencoders explained}
 \author{Lorenzo Bozzoni}
-\date{March 2024}
+\date{\today}
 
 \begin{document}
 
 \maketitle
+
+This small research is a theoretical project for the Numerical Analyisis for Machine Learning course at Politecnico di Milano. In the following pages an introduction to the topic of autoencoders is presented including linear and boolean class and a final part on the complexity.
+
 \tableofcontents
 
 \section{Introduction}
@@ -70,6 +74,6 @@ It is important to notice that if $p < n$ corresponds to a compression or featur
 \input{LinearAutoencoders}
 \input{BooleanAutoencoders.tex}
 \input{ClusteringComplexity.tex}
-
+\input{OvercompleteAutoencoders.tex}
 
 \end{document}

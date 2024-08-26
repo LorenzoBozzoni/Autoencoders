@@ -90,6 +90,10 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
@@ -290,6 +294,8 @@ INPUT ./Images/LinearAutoenc_Saddles.png
 INPUT ./Images/LinearAutoenc_Saddles.png
 INPUT ./Images/LinearAutoenc_Saddles.png
 INPUT ./Images/LinearAutoenc_Saddles.png
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT ./BooleanAutoencoders.tex
 INPUT ./BooleanAutoencoders.tex
 INPUT BooleanAutoencoders.tex
@@ -304,8 +310,6 @@ INPUT ./Images/Manhattan_Voronoi_Diagram.png
 INPUT ./Images/Manhattan_Voronoi_Diagram.png
 INPUT ./Images/Manhattan_Voronoi_Diagram.png
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT ./Images/Hypercube4Dimensions.png
 INPUT ./Images/Hypercube4Dimensions.png
 INPUT ./Images/Hypercube4Dimensions.png
@@ -314,6 +318,14 @@ INPUT ./Images/Hypercube4Dimensions.png
 INPUT ./ClusteringComplexity.tex
 INPUT ./ClusteringComplexity.tex
 INPUT ClusteringComplexity.tex
+INPUT ./OvercompleteAutoencoders.tex
+INPUT ./OvercompleteAutoencoders.tex
+INPUT OvercompleteAutoencoders.tex
+INPUT ./Images/Overcomplete_autoencoders.png
+INPUT ./Images/Overcomplete_autoencoders.png
+INPUT ./Images/Overcomplete_autoencoders.png
+INPUT ./Images/Overcomplete_autoencoders.png
+INPUT ./Images/Overcomplete_autoencoders.png
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
