@@ -9,6 +9,7 @@
 \usepackage{graphicx} % Required for inserting images
 \usepackage{tikz}
 \usepackage{multicol}
+\newcommand{\revin}{\mathbin{\rotatebox[origin=c]{180}{$\in$}}}
 \usetikzlibrary{fit}
 \newcommand{\overlay}[2][]{\tikz[overlay,
   remember picture, #1]{#2}}
@@ -60,7 +61,32 @@ the least possible amount of distortion. To derive a fairly general framework, a
     \item $\mathcal{X} = {x_1, \dots, x_m}$ is a set of $m$ (training) vectors in $\mathbb{F}^n$. When the external targets are present, we let $\mathcal{Y} = {y_1, \dots, y_m}$ denote the corresponding set of $m$ target vectors in $\mathbb{F}^n$ 
     \item $\Delta$ is a dissimilarity or distortion function defined over $\mathbb{F}^n$
 \end{itemize}
-For any $A \in \mathcal{A}$ and $B \in \mathcal{B}$, the autoencoder transforms an input vector $x \in \mathbb{F}^n$ into an output vector $A \circ B(x) \in \mathbb{F}^n$. The corresponding \textbf{autoencoder problem} is to find $A \in \mathcal{A}$ and $B \in \mathcal{B}$ that minimize the overall distortion function:
+For any $A \in \mathcal{A}$ and $B \in \mathcal{B}$, the autoencoder transforms an input vector $x \in \mathbb{F}^n$ into an output vector $A \circ B(x) \in \mathbb{F}^n$.
+\[
+\mathcal{X} \revin x = 
+\begin{bmatrix}
+    x_1\\
+    x_2\\
+    \vdots\\
+    x_n
+\end{bmatrix}
+\overset{B}{\longrightarrow}
+\begin{bmatrix}
+    z_1\\
+    z_2\\
+    \vdots\\
+    z_p
+\end{bmatrix}
+\overset{A}{\longrightarrow}
+\begin{bmatrix}
+    y_1\\
+    y_2\\
+    \vdots\\
+    y_n
+\end{bmatrix}
+= y \in \mathcal{Y}
+\]
+ The corresponding \textbf{autoencoder problem} is to find $A \in \mathcal{A}$ and $B \in \mathcal{B}$ that minimize the overall distortion function:
 \begin{equation}
     \min E(A,B) = \min_{A ,B} \sum_{t=1}^m E(A,B)=\min_{A ,B} \sum_{t=1}^m \Delta(x_t, A \circ B(x_t))
 \end{equation}
@@ -69,7 +95,14 @@ problem becomes:
 \begin{equation}
     \min E(A,B) = \min_{A ,B} \sum_{t=1}^m E(A,B)=\min_{A ,B} \sum_{t=1}^m \Delta(y_t, A \circ B(x_t))
 \end{equation}
-It is important to notice that if $p < n$ corresponds to a compression or feature extraction, while $p > n$ corresponds to a decompression. 
+It is important to notice that if $p < n$ corresponds to a compression or feature extraction, while $p > n$ corresponds to a decompression. Here is a simple classification of the different types of autoencoders:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{./Images/Autoencoders_Classification.png}
+  \caption{Simple classification of autoencoders}
+\end{figure}
+We are going to explore linear real and boolean autoencoders in the following sections.
+
 
 \input{LinearAutoencoders}
 \input{BooleanAutoencoders.tex}

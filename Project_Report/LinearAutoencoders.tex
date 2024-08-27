@@ -3,13 +3,13 @@ We consider the problem of learning from examples in layered linear feed-forward
 
 We assume to have $N$ samples and $N$ lables so for each $x_n$ input vector corresponds the $y_n$ label. The classical quadratic error function is defined as:
 \[
-E = \sum_n \|y_n - F(x_n)\|^2 
+E = \sum_{t=1}^m \|y_t - F(x_t)\|^2 
 \]
 where $F$ is the current function implemented by the network. We defined also the \textbf{covariance matrices}:
 \[
 \begin{split}
-    \Sigma_{XX} &= \sum_n x_n x_n^\intercal \hspace{1cm} \Sigma_{XY} = \sum_n x_n y_n^\intercal\\
-    \Sigma_{YY} &= \sum_n y_n y_n^\intercal \hspace{1cm} \Sigma_{YX} = \sum_n y_n x_n^\intercal\\
+    \Sigma_{XX} &= \sum_{t=1}^m x_t x_t^\intercal \hspace{1cm} \Sigma_{YX} = \sum_{t=1}^m y_t x_t^\intercal\\
+    \Sigma_{YY} &= \sum_{t=1}^m y_t y_t^\intercal \hspace{1cm} \Sigma_{XY} = \sum_{t=1}^m x_t y_t^\intercal
 \end{split}
 \]
 Where these quantities are defined. \\
@@ -296,9 +296,17 @@ Therefore:
 \[
     \begin{split}
         E(\tilde{A},\tilde{B}) &= tr(\Sigma_{YY}) - tr(P_{U^\intercal \tilde{A}}\Lambda)\\
-        &= tr(\Sigma_{YY}) - \left[\right]
+        &= \text{tr} \Sigma_{YY} - \left[\sum_{i \in \mathcal{I} - \{j\}} \lambda_i + \frac{\lambda_j}{(1 + \epsilon^2)} + \frac{\epsilon^2 \lambda_k}{(1 + \epsilon^2)}\right]\\
+        &= \text{tr} \Sigma_{YY} - \sum_{i \in \mathcal{I}} \lambda_i - \frac{\epsilon^2 (\lambda_k - \lambda_j)}{(1 + \epsilon^2)}\\
+        &= E(A, B) - \frac{\epsilon^2 (\lambda_k - \lambda_j)}{(1 + \epsilon^2)}.
     \end{split}    
 \]
+By taking values of $\epsilon$ arbitrarily small, we see that any neighborhood of $A,B$ contains points of the form $\tilde{A},\tilde{B}$ with a strictly smaller error function. Thus if $\mathcal{I} \neq \{1,2,\dots,p\}$, then (8) and (9) define a saddle point and not a local minimum. Notice that, in any case, it could not be a local maximum because of the strict convexity of $E$, with fixed full rank $A$, in fact 1.
+
+
+close to 0, we can make $E(\tilde{A},\tilde{B})$ arbitrarily close to $E(A,B)$ and strictly smaller. This shows that the critical point defined by $A$ and $B$ is a saddle point. The proof of fact 4 is now complete.
+
+
 
 \subsection{Equivalence with PCA}
 In this section we show in detail the equivalence between the principal component analysis (PCA) and the linear autoencoder. We consider the case of centered data, that is, the mean of each column of the data matrix $X$ is zero. The covariance matrix of the data is then given by $\Sigma_{XX} = \frac{1}{N}XX^\intercal$. The principal component analysis consists in finding the orthogonal matrix $U$ such that the first $p$ columns of $U$ are the eigenvectors of $\Sigma_{XX}$ associated with the $p$ largest eigenvalues. The matrix $U$ is then used to project the data onto the subspace spanned by the first $p$ principal components. The linear autoencoder consists in finding the matrices $A$ and $B$ such that $W = AB$ is the orthogonal projection onto the subspace spanned by the first $p$ eigenvectors of $\Sigma_{XX}$ associated with the $p$ largest eigenvalues. The matrix $A$ is then used to project the data onto the subspace spanned by the first $p$ principal components.
