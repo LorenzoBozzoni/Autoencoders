@@ -12,7 +12,7 @@ In this section, we briefly review some results on clustering complexity and the
 
 % missing some details
 
-A graph is cubical if it is the subgraph of some hypercube $\mathbb{H}^d$ for some $d$. Although deciding whether a graph is cubical is NP-complete, there is a theorem providing a necessary and sufficient condition for a graph to be cubical. A graph $G(V,E)$ is cubical and embeddable in $\mathbb{H}^d$ if and only if it is possible to color the edges of $G$ with $d$ colors such that:
+A graph is cubical if it is the subgraph of some hypercube $\mathbb{H}^d$ for some $d$ (\citep{harary1988cubical}; \citep{livingston1988embeddings}). Although deciding whether a graph is cubical is $\mathcal{NP}$-complete \citep{afrati1985complexity}, there is a theorem (\citep{havel1972b}) providing a necessary and sufficient condition for a graph to be cubical. A graph $G(V,E)$ is cubical and embeddable in $\mathbb{H}^d$ if and only if it is possible to color the edges of $G$ with $d$ colors such that:
 \begin{enumerate}
     \item All edges incident with a common vertex are of different color
     \item In each path of $G$, there is some color that appears an odd number of times
@@ -31,7 +31,7 @@ A graph is cubical if it is the subgraph of some hypercube $\mathbb{H}^d$ for so
     The hypercube clustering decision problem $\mathcal{NP}$-hard when $k \sim m^\epsilon$ $(\epsilon > 0)$
 \end{theorem}
 \begin{proof}
-    To sketch the reduction, we start from the problem of clustering $m$ points in the plane $\mathbb{R}^2$ using cluster centroids and the $L_1$ distance, which is $\mathcal{NP}$-complete by reduction from 3-SAT when $k \sim m^\epsilon$ $(\epsilon > 0)$. Without any loss of generality, we can assume that the points in these problems lie on the vertices of a square lattice. Using the theorem in Havel and Moravek, one can show that a $n \times m$ square lattice in the plane can be embedded in a hypercube $\mathbb{H}^{m+n}$. 
+    To sketch the reduction, we start from the problem of clustering $m$ points in the plane $\mathbb{R}^2$ using cluster centroids and the $L_1$ distance, which is $\mathcal{NP}$-complete (\citep{megiddo1984complexity}) by reduction from 3-SAT (\citep{garey1979computers}) when $k \sim m^\epsilon$ $(\epsilon > 0)$ (see also \citep{mahajan2012planar}, \citep{vattani2009hardness}). Without any loss of generality, we can assume that the points in these problems lie on the vertices of a square lattice. Using the theorem in \citep{havel1972b}, one can show that a $n \times m$ square lattice in the plane can be embedded in a hypercube $\mathbb{H}^{m+n}$. 
     Example:
     \begin{multicols}{2}
     \begin{center}

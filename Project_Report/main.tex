@@ -2,6 +2,7 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsthm}
+\usepackage[authoryear]{natbib}
 \usepackage{mathtools}
 \usepackage{hyperref}
 \usepackage[left=3cm,right=3cm]{geometry}
@@ -46,7 +47,9 @@
 
 \maketitle
 
-This small research is a theoretical project for the Numerical Analyisis for Machine Learning course at Politecnico di Milano. In the following pages an introduction to the topic of autoencoders is presented including linear and boolean class and a final part on the complexity.
+This small article is a theoretical project for the Numerical Analyisis for Machine Learning course at Politecnico di Milano. In particular, using as main reference \citep{pmlr-v27-baldi12a}, we are going to explore the topic of autoencoders; starting from the linear case, we then proceed to the boolean case and concluding with the clustering discussion and overcomplete autoencoders.  
+
+including linear and boolean class and a final part on the complexity.
 
 \tableofcontents
 
@@ -104,9 +107,16 @@ It is important to notice that if $p < n$ corresponds to a compression or featur
 We are going to explore linear real and boolean autoencoders in the following sections.
 
 
+
 \input{LinearAutoencoders}
 \input{BooleanAutoencoders.tex}
 \input{ClusteringComplexity.tex}
 \input{OvercompleteAutoencoders.tex}
 
+
+\newpage
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{plainnat}    %unsrt
+\nocite{*}
+\bibliography{references.bib}
 \end{document}

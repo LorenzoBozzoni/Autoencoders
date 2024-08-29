@@ -1,0 +1,71 @@
+\begin{thebibliography}{12}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Afrati et~al.(1985)Afrati, Papadimitriou, and Papageorgiou]{afrati1985complexity}
+Foto Afrati, Christos~H Papadimitriou, and George Papageorgiou.
+\newblock The complexity of cubical graphs.
+\newblock \emph{Information and control}, 66\penalty0 (1-2):\penalty0 53--60, 1985.
+
+\bibitem[Baldi(2012)]{pmlr-v27-baldi12a}
+Pierre Baldi.
+\newblock Autoencoders, unsupervised learning, and deep architectures.
+\newblock In Isabelle Guyon, Gideon Dror, Vincent Lemaire, Graham Taylor, and Daniel Silver, editors, \emph{Proceedings of ICML Workshop on Unsupervised and Transfer Learning}, volume~27 of \emph{Proceedings of Machine Learning Research}, pages 37--49, Bellevue, Washington, USA, 02 Jul 2012. PMLR.
+\newblock URL \url{https://proceedings.mlr.press/v27/baldi12a.html}.
+
+\bibitem[Baldi and Hornik(1989)]{BALDI198953}
+Pierre Baldi and Kurt Hornik.
+\newblock Neural networks and principal component analysis: Learning from examples without local minima.
+\newblock \emph{Neural Networks}, 2\penalty0 (1):\penalty0 53--58, 1989.
+\newblock ISSN 0893-6080.
+\newblock \doi{https://doi.org/10.1016/0893-6080(89)90014-2}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/0893608089900142}.
+
+\bibitem[Garey and Johnson(1979)]{garey1979computers}
+Michael~R Garey and David~S Johnson.
+\newblock Computers and intractability. w. h, 1979.
+
+\bibitem[Harary(1988)]{harary1988cubical}
+Frank Harary.
+\newblock Cubical graphs and cubical dimensions.
+\newblock \emph{Computers \& Mathematics with Applications}, 15\penalty0 (4):\penalty0 271--275, 1988.
+
+\bibitem[Hartman(1976)]{hartman1976homeomorphic}
+Jehuda Hartman.
+\newblock The homeomorphic embedding of kn in the m-cube.
+\newblock \emph{Discrete Mathematics}, 16\penalty0 (2):\penalty0 157--160, 1976.
+
+\bibitem[Havel and Mor{\'a}vek(1972)]{havel1972b}
+Ivan Havel and Jaroslav Mor{\'a}vek.
+\newblock $ b $-valuations of graphs.
+\newblock \emph{Czechoslovak Mathematical Journal}, 22\penalty0 (2):\penalty0 338--351, 1972.
+
+\bibitem[Livingston and Stout(1988)]{livingston1988embeddings}
+Marilynn Livingston and Quentin~F Stout.
+\newblock Embeddings in hypercubes.
+\newblock \emph{Mathematical and Computer Modelling}, 11:\penalty0 222--227, 1988.
+
+\bibitem[Mahajan et~al.(2012)Mahajan, Nimbhorkar, and Varadarajan]{mahajan2012planar}
+Meena Mahajan, Prajakta Nimbhorkar, and Kasturi Varadarajan.
+\newblock The planar k-means problem is np-hard.
+\newblock \emph{Theoretical Computer Science}, 442:\penalty0 13--21, 2012.
+
+\bibitem[Megiddo and Supowit(1984)]{megiddo1984complexity}
+Nimrod Megiddo and Kenneth~J Supowit.
+\newblock On the complexity of some common geometric location problems.
+\newblock \emph{SIAM journal on computing}, 13\penalty0 (1):\penalty0 182--196, 1984.
+
+\bibitem[Vattani(2009)]{vattani2009hardness}
+Andrea Vattani.
+\newblock The hardness of k-means clustering in the plane.
+\newblock \emph{Manuscript, accessible at http://cseweb. ucsd. edu/avattani/papers/kmeans\_hardness. pdf}, 617, 2009.
+
+\bibitem[Winkler(1983)]{winkler1983proof}
+Peter~M Winkler.
+\newblock Proof of the squashed cube conjecture.
+\newblock \emph{Combinatorica}, 3:\penalty0 135--139, 1983.
+
+\end{thebibliography}

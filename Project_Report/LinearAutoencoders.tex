@@ -330,7 +330,7 @@ For either $||\cdot||_F$, $||\cdot||_2$ we have:
     ||A - A_k|| \leq ||A - B|| \hspace{1cm} \forall B \text{ of rank } k
 \]
 \end{theorem}
-So, if the hidden layer of the autoencoder is $k$, the optimal solution is the truncated SVD:
+So, if the rank of the hidden layer of the autoencoder is $k$, the optimal solution is the truncated SVD:
 \[
     HW^* = U_{:,\leq k}\Sigma_{k,k}V_{:,\leq k}^\intercal
 \]

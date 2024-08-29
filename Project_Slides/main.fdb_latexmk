@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1724677358.99681 "/home/lorenzobozzoni/Documenti/Polimi/PrimoAnno/PrimoSemestre/NumericalAnalysisForML/Autoencoders/Project_Slides/main.tex" "main.pdf" "main" 1724677362.81206 0
-  "/home/lorenzobozzoni/Documenti/Polimi/PrimoAnno/PrimoSemestre/NumericalAnalysisForML/Autoencoders/Project_Slides/main.tex" 1724677358.53595 9942 d4cc9bbafb76ef1e5777294b3d768a8f ""
+["pdflatex"] 1724943119.32038 "/home/lorenzobozzoni/Documenti/Polimi/PrimoAnno/PrimoSemestre/NumericalAnalysisForML/Autoencoders/Project_Slides/main.tex" "main.pdf" "main" 1724943121.66852 0
+  "/home/lorenzobozzoni/Documenti/Polimi/PrimoAnno/PrimoSemestre/NumericalAnalysisForML/Autoencoders/Project_Slides/main.tex" 1724943118.8332 9950 666696641e8eb007a57ff0c82f85820c ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -240,11 +240,11 @@
   "Images/Euclidean_Voronoi_diagram.png" 1711211856.91707 41787 95ccd3e1c1e265456cdf0b05b12c0807 ""
   "Images/Hypercube4Dimensions.png" 1711649272.32797 2487 2a619ef5417a1cddf32abdf8ab79e7d3 ""
   "Images/Manhattan_Voronoi_Diagram.png" 1711211865.89508 15795 45fc5b319f31575ae07cf2d5d858ed12 ""
-  "main.aux" 1724677362.67396 3991 c0ca0f84ec9c62e723df848d4394e071 "pdflatex"
-  "main.nav" 1724677362.67596 2347 ab36980fd8d721253f03fb050fd7bbd2 "pdflatex"
-  "main.out" 1724677362.67496 569 fc6db4eb4d3b05dd78bcae4b372f71da "pdflatex"
-  "main.tex" 1724677358.53595 9942 d4cc9bbafb76ef1e5777294b3d768a8f ""
-  "main.toc" 1724677362.67596 222 90b3bc8a8e011f08c52f86d9f1c9b596 "pdflatex"
+  "main.aux" 1724943121.53021 3991 c0ca0f84ec9c62e723df848d4394e071 "pdflatex"
+  "main.nav" 1724943121.53121 2347 ab36980fd8d721253f03fb050fd7bbd2 "pdflatex"
+  "main.out" 1724943121.53121 569 fc6db4eb4d3b05dd78bcae4b372f71da "pdflatex"
+  "main.tex" 1724943118.8332 9950 666696641e8eb007a57ff0c82f85820c ""
+  "main.toc" 1724943121.53121 222 90b3bc8a8e011f08c52f86d9f1c9b596 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
