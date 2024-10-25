@@ -9,6 +9,8 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/size10.clo
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/size10.clo
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/cancel/cancel.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/cancel/cancel.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -360,6 +362,7 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam5.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb

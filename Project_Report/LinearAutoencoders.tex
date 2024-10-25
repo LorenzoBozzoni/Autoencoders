@@ -1,7 +1,7 @@
 \section{Linear Autoencoders}
 We consider the problem of learning from examples in layered linear feed-forward neural networks using optimization methods, such as back propagation, with respect to the usual quadratic error function E of the connection weights. 
 
-We assume to have $N$ samples and $N$ lables so for each $x_n$ input vector corresponds the $y_n$ label. The classical quadratic error function is defined as:
+We assume to have $m$ samples and $m$ labels so for each $x_t$ input vector corresponds the $y_t$ label. The classical quadratic error function is defined as:
 \[
 E = \sum_{t=1}^m \|y_t - F(x_t)\|^2 
 \]
@@ -68,7 +68,7 @@ is convex. A point $z$ corresponds to a global minimum of $F$ if and only if it 
 
 \subsection{Fact 1}
 For any fixed $n \times p$ matrix $A$ the function $E(A,B)$ is convex in the coefficients of $B$ and attains its minimum for any $B$ satisfying the equation
-\begin{equation}
+\begin{equation}\tag{2}
     A^\intercal AB\Sigma_{XX} = A^\intercal \Sigma_{YX}
 \end{equation}
 If $\Sigma_{XX}$ is invertible and A is full rank $p$, then $E$ is strictly convex and has unique minimum reached when:
@@ -155,7 +155,7 @@ If $A$ is full rank $p$, then $A$ and $B$ define a critical point of $E$ if and 
 \begin{proof}
     Assume first that $A$ and $B$ define a critical point of $E$, with $A$ full rank. Then from fact 1 we get $B = \hat{B}(A)$ and thus
     \[
-        W = AB = A(A^\intercal A)^{-1}A\Sigma_{YX}\Sigma_{XX}^{-1} = P_A\Sigma_{YX}\Sigma_{XX}^{-1}
+        W = AB = A(A^\intercal A)^{-1}A^\intercal\Sigma_{YX}\Sigma_{XX}^{-1} = P_A\Sigma_{YX}\Sigma_{XX}^{-1}
     \]
     Which is (6). Multiplication of (4) by $A^\intercal$ on the right yields
     \[
@@ -169,7 +169,7 @@ If $A$ is full rank $p$, then $A$ and $B$ define a critical point of $E$ if and 
 
     Conversely, assume that $A$ and $W$ satisfy (6) and (7), with $A$ full rank. Multiplying (6) by $(A^\intercal A)^{-1}A^\intercal$ on the left yields
     \[
-        B = (A^\intercal A)^{-1}A\Sigma_{YX}\Sigma_{XX}^{-1} = \hat{B}(A)
+        B = (A^\intercal A)^{-1}A^\intercal\Sigma_{YX}\Sigma_{XX}^{-1} = \hat{B}(A)
     \]
     and (2) is satisfied. From $P_A\Sigma P_A = \Sigma P_A$ and using (6) we immediately get 
     \[
@@ -198,7 +198,7 @@ For such a critical point we have:
 \begin{equation} \tag{11}
     E(A,B) = tr(\Sigma_{YY}) - \sum_{i \in \mathcal{I}} \lambda_i
 \end{equation}
-Therefore a critical $W$ of rank $p$ is always the product of the ordinary least squares regression matrix followed by an orthogonal projection onto the subspace spanned by $p$ eigenvectors of $\Sigma$. The critical map $W$ associated with the index set $\{1,2,\dots, p\}$ is the unique local and global minimum of $E$. The remaining $\binom{n}{p} - 1$ $p$-index sets correspond to saddle points. All additional critical points defined by matrices $A$ and $B$ which are not full rank are also saddle points and can be characterized in terms of orthogonal projections onto subspaces spanned by $q$ eigenvectors of $\Sigma$ with $q < p$ (see Figure 1). 
+Therefore a critical $W$ of rank $p$ is always the product of the ordinary least squares regression matrix followed by an orthogonal projection onto the subspace spanned by $p$ eigenvectors of $\Sigma$. The critical map $W$ associated with the index set $\{1,2,\dots, p\}$ is the unique local and global minimum of $E$. The remaining $\binom{n}{p} - 1$ $p$-index sets correspond to saddle points. All additional critical points defined by matrices $A$ and $B$ which are not full rank are also saddle points and can be characterized in terms of orthogonal projections onto subspaces spanned by $q$ eigenvectors of $\Sigma$ with $q < p$ (see Figure 2). 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{./Images/LinearAutoenc_Saddles.png}
@@ -235,6 +235,12 @@ P_{U^\intercal A} = U^\intercal A (A^\intercal UU^\intercal A)^{-1} A^\intercal 
 or, equivalently, $P_A = UP_{U^\intercal A} U^\intercal$. Hence (7) yields:
 \[
     UP_{U^\intercal A}U^\intercal U\Lambda U^\intercal = P_A\Sigma = \Sigma P_A = U\Lambda U^\intercal U P_{U^\intercal A}U^\intercal 
+\]
+\[
+    \begin{split}
+        UP_{U^\intercal A}\underbrace{U^\intercal U}_{I}\Lambda U^\intercal &= U\Lambda \underbrace{U^\intercal U}_{I} P_{U^\intercal A}U^\intercal \\
+        \cancel{U}P_{U^\intercal A} \Lambda \cancel{U^\intercal} &= \cancel{U}\Lambda P_{U^\intercal A}\cancel{U^\intercal} \\
+    \end{split}
 \]
 and so $P_{U^\intercal A}\Lambda = \Lambda P_{U^\intercal A}$. Since $\lambda_1 > \dots > \lambda_n > 0$, it is readily seen that $P_{U^\intercal A}$ is an orthogonal projector of rank $p$ and its eigenvalues are 1 ($p$ times) and 0 ($n-p$ times). Therefore there exists a unique index set $\mathcal{I} = {i_1, \dots, i_p}$ with $1 \leq i_1 < \dots < i_p \leq n$ such that $P_{U^\intercal A} = I_{\mathcal{I}}$, where $I_{\mathcal{I}}$ is the diagonal matrix with entry $i=1$ if $i \in \mathcal{I}$ and 0 otherwise. It follows that 
 \[
@@ -323,7 +329,7 @@ The aim is to minimize the recontruction error, i.e. the difference between the 
 \[
     \min_{\theta} \sum_{i=1}^m \sum_{j=1}^n (x_{ij} - \hat{x}_{ij})^2 \hspace{0.3cm} \equiv \hspace{0.3cm} \min_{HW^*} (\|X - HW^*\|_F)^2
 \]
-But the problem of finding a matrix with minimum distance to another matrix is trivial since the \textbf{Eckart-Young theorem} guarantees that:\\
+But the problem of finding a matrix with minimum distance to another matrix is trivial since the \textbf{Eckart-Young theorem} (\citep{eckart1936approximation}) guarantees that:\\
 \begin{theorem}
 For either $||\cdot||_F$, $||\cdot||_2$ we have:
 \[
@@ -350,7 +356,7 @@ We are now going to show that $H$ is a linear encoding and find an expression fo
         &= XV\Sigma^T \Sigma^{T^{-1}}\Sigma^{-1}U^T U_{:,\leq k}\Sigma_{k,k} \qquad &((AB)^{-1} = B^{-1}A^{-1}) \\
         &= XV\Sigma^{-1} I_{:,\leq k}\Sigma_{k,k} \qquad &(U^T U_{:,\leq k} = I_{:,\leq k}) \\
         &= XV I_{:,\leq k} \qquad &(\Sigma^{-1} I_{:,\leq k} = \Sigma_{k,k}^{-1}) \\
-        H &= XV_{:,\leq k}
+        H &= XV_{:,\leq k} 
         \end{align*}
 
         Thus $H$ is a linear transformation of $X$ and $W = V_{:,\leq k}$. The encoder matrix is the matrix of the first $k$ eigenvectors of the data covariance matrix. This means that the hidden layer of the autoencoder is just the principal component analysis of the data.  

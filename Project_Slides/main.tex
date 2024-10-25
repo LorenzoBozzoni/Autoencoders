@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[9pt]{beamer}
 \usetheme{Madrid}
 \usecolortheme{crane}
 \usepackage{smartdiagram}
@@ -115,23 +115,75 @@ In the case of \textbf{linear autoencoders} we have:
 \end{frame}
 
 \begin{frame}{Linear autoencoders}
-    \begin{itemize}
-        \item Since we are applying only linear transformations, the best compression we can achieve is the one that projects the input data on the subspace spanned by the eigenvectors of the covariance matrix of the input data.\\
-
-        \item This corresponds to the \textbf{Principal Component Analysis (PCA)} when the input is normalized as follows:
-        \[
-            \hat{x}_{i,j} = \dfrac{1}{\sqrt{m}}\left(x_{ij} - \dfrac{1}{m}\sum_{k=1}^m x_{kj}\right)
-        \]    
-    \end{itemize}
-    
+    An important result is the shape of the error function $E$:
+    \begin{multicols}{2}
+        \begin{center}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.4\textwidth]{./Images/LinearAutoenc_Saddles.png}
+            \end{figure}
+        \end{center}
+        \newcolumn
+        \begin{itemize}
+            \item $\Sigma$ is full-rank with $n$ distinct eigenvalues $\lambda_1 > \dots > \lambda_n$
+            \item $\mathcal{I} = {i_1, \dots, i_p}$ ($1 \leq i_1 < \dots < i_p \leq n$) is any ordered $p$-index set
+            \item $U_{\mathcal{I}} = [ u_{i_1}, \dots, u_{i_p} ]$ matrix formed by the orthonormal eigenvectors of $\Sigma$ associated with the eigenvalues $\lambda_{i_1}, \dots, \lambda_{i_p}$
+        \end{itemize}
+    \end{multicols}
+The critical map $W$ associated with the index set $\{1,2,\dots, p\}$ is the unique local and global minimum of $E$. The remaining $\binom{n}{p} - 1$ $p$-index sets correspond to saddle points. All additional critical points defined by matrices $A$ and $B$ which are not full rank are also saddle points and can be characterized in terms of orthogonal projections onto subspaces spanned by $q$ eigenvectors of $\Sigma$ with $q < p$
 \end{frame}
+
+\begin{frame}{Linear autoencoders}
+Since we are applying only linear transformations, the best compression we can achieve is the one that projects the input data on the subspace spanned by the eigenvectors of the covariance matrix of the input data.\\
+\vspace{1cm}
+This corresponds to the \textbf{Principal Component Analysis (PCA)} when the input is normalized as follows:
+\[
+    \hat{x}_{i,j} = \dfrac{1}{\sqrt{m}}\left(x_{ij} - \dfrac{1}{m}\sum_{k=1}^m x_{kj}\right)
+\]      
+\end{frame}
+
+
+\begin{frame}{Linear autoencoders}
+    The aim is to minimize the recontruction error, i.e. the difference between the input data and the output data which can be written as:
+    \[
+        \min_{\theta} \sum_{i=1}^m \sum_{j=1}^n (x_{ij} - \hat{x}_{ij})^2 \hspace{0.3cm} \equiv \hspace{0.3cm} \min_{HW^*} (\|X - HW^*\|_F)^2
+    \]
+    From the Eckart-Young theorem, we know that the optimal solution is the truncated SVD:
+\[
+    HW^* = U_{:,\leq k}\Sigma_{k,k}V_{:,\leq k}^\intercal
+\]
+By matching variables one possible solution is:
+\[
+    H = U_{:,\leq k}\Sigma_{k,k} \hspace{0.5cm} W^* = V_{:,\leq k}^\intercal
+\]
+\end{frame}
+
+
+\begin{frame}{Linear autoencoders}
+\begin{proof}
+    \begin{align*}
+        H &= U_{:,\leq k}\Sigma_{k,k} \\
+        &= (XX^T)(XX^T)^{-1}U_{:,\leq K}\Sigma_{k,k} \\
+        &= (XV\Sigma^T U^T)(U\Sigma V^T V\Sigma^T U^T)^{-1}U_{:,\leq k}\Sigma_{k,k} \\
+        &= XV\Sigma^T U^T(U\Sigma\Sigma^T U^T)^{-1}U_{:,\leq k}\Sigma_{k,k} \\
+        &= XV\Sigma^T U^T U(\Sigma\Sigma^T)^{-1}U^T U_{:,\leq k}\Sigma_{k,k} \\
+        &= XV\Sigma^T (\Sigma\Sigma^T)^{-1}U^T U_{:,\leq k}\Sigma_{k,k} \\
+        &= XV\Sigma^T \Sigma^{T^{-1}}\Sigma^{-1}U^T U_{:,\leq k}\Sigma_{k,k}\\
+        &= XV\Sigma^{-1} I_{:,\leq k}\Sigma_{k,k}\\
+        &= XV I_{:,\leq k} = XV_{:,\leq k}
+        \end{align*}
+    
+        Thus $H$ is a linear transformation of $X$ and the encoder matrix is the matrix of the first $k$ eigenvectors of the data covariance matrix. 
+\end{proof}
+\end{frame}
+
 
 \section{Boolean autoencoders}
 \begin{frame}{Boolean autoencoders}
     In the case of \textbf{Boolean autoencoders} we have:
     \begin{itemize}
         \item $\mathbb{F},\mathbb{G}$ are the Boolean fields, i.e $\{0,1\}$, the Galois field $\mathbb{F}_2$
-        \item $\mathcal{A},\mathcal{B}$ are the classes of Boolean transformations: $A,B$ are respectively matrices of shape $p \times n$ and $n \times p$ with entries in $\{0,1\}$
+        \item $\mathcal{A},\mathcal{B}$ are the classes of Boolean transformations: $A,B$ are unrestricted boolean functions
         \item $\Delta$ is the Hamming distance
     \end{itemize}
 \end{frame}
@@ -154,25 +206,38 @@ For any $j$, $(p)_j$ is the closest binary value to $c_j$.
 \begin{frame}{Boolean autoencoders}
 This means that for each row, we check the majority of the values and we set the value of the row to the majority value.\\
 \vspace{1cm}
-    \[
-    k\text{-rows }
+\[
+    n\text{ rows }
   \begin{bmatrix}
     \flag{left}{1} & 0  & 1 & 1 & 1 & \flag{right}{0}\\
-    1 & 1 & 0 & 1 & 0  & 1 \\
-    0 & 0 & 1 & 0 & 1  & 0\\
-    1 & 1 & 0 & 1 & 1  & 0 \\
+    0 & 0 & 1 & 1 & 0 & 0 \\
+    1 & 1 & 0 & 1 & 1 & 0 \\
+    1 & 0 & 1 & 0 & 1 & 0 \\
+    0 & 1 & 1 & 1 & 0 & 1 \\
+    0 & 0 & 0 & 0 & 0 & 1 \\
+    0 & 1 & 0 & 0 & 0 & 1 \\
+    0 & 0 & 0 & 1 & 0 & 0 \\
   \end{bmatrix}
   \hspace{3cm}
   \highlight{N}
-  \flag{left}{1}
-    \flag{right}{} 
+  \underbrace{\begin{bmatrix}
+    \flag{left}{1}
+    \flag{right}{}  \\
+    0 \\
+    1 \\
+    0 \\
+    1 \\
+    0 \\
+    0 \\
+    0 \\
+  \end{bmatrix}}_{\text{Majority}(p)}
   \highlight{NT}
+  \in \mathbb{H}^n
 \]
 \overlay{
   \draw[->, thick, red, dashed] (N) -- (NT)
     node [pos=0.48, above] {$p_1$};
-  \node[above of = N ] { $n$-element rows   };
-  \node[below of = NT] { $Majority(p_1)$ };
+  \node[above of = N ] { $k$ column vectors   };
 }
 
 \end{frame}
@@ -207,6 +272,7 @@ Considering the two steps mapping:
 \[
     x \xrightarrow{B} h \xrightarrow{A} y
 \]
+Where the dimension of the hidden layer is $p$, so there are $2^p$ possible configurations of the hidden layer, denoted by $h_1, \dots, h_{2^p}$.
 \hspace{0.5cm}
 \begin{theorem}
     \textbf{Fixed layer solution}: if the $A$ mapping is fixed , then the optimal mapping $B^*$ is given by $B^*(x) = h_i$ for any $x$ in $\mathcal{C}_i = \mathcal{C}^{Vor}(A(h_i))$. Conversely, if $B$ is fixed, then the optimal mapping $A^*$ is given by $A^*(h_i) = \text{Majority}\left[\mathcal{X} \cap B^{-1}(h_i)\right]$ 
@@ -244,7 +310,7 @@ The basic classes for complexity are:
 
 
 
-\begin{frame}{Complexity recap}
+\begin{frame}{Clustering complexity}
     \begin{theorem}
         Consider the following hypercube clustering problem:
         \begin{itemize}
@@ -262,12 +328,98 @@ The basic classes for complexity are:
 
 
 \begin{frame}{Clustering complexity}
-To prove the hypercube clustering problem is $\mathcal{NP}$-hard we need to reduce prove that an $\mathcal{NP}$-complete problem can be reduced to it in polynomial time. The following reductions are used:
+To prove the hypercube clustering problem is $\mathcal{NP}$-hard we need to demonstrate that an $\mathcal{NP}$-complete problem can be reduced to it in polynomial time. The following reductions are used:
 \begin{center}
     \smartdiagram[flow diagram:horizontal]{3-SAT, $\mathbb{R}^2$ clustering, hypercube\ clustering}
 \end{center}
+\vspace{0.3cm}
+To sketch the reduction, we start from the problem of clustering $m$ points in the plane $\mathbb{R}^2$ using cluster centroids and the $L_1$ distance, which is $\mathcal{NP}$-complete by reduction from 3-SAT when $k \sim m^\epsilon$ $(\epsilon > 0)$. Without any loss of generality, we can assume that the points in these problems lie on the vertices of a square lattice. Using the theorem in Havel and Moràvek paper, one can show that a $n \times m$ square lattice in the plane can be embedded in a hypercube $\mathbb{H}^{m+n}$.    
 \end{frame}
 
 
+\begin{frame}{Clustering complexity}
+
+    Example:
+    \begin{multicols}{2}
+    \begin{center}
+                % 4x2 Lattice with different shaped lines
+        \begin{tikzpicture}[scale=1.5]
+            % Draw the grid points
+            \filldraw[black] (0,0) circle (1pt) node[anchor=north] {A};
+            \filldraw[black] (1,0) circle (1pt) node[anchor=north] {B};
+            \filldraw[black] (2,0) circle (1pt) node[anchor=north] {C};
+            %\filldraw[black] (3,0) circle (1pt) node[anchor=north] {D};
+
+            \filldraw[black] (0,1) circle (1pt) node[anchor=south] {E};
+            \filldraw[black] (1,1) circle (1pt) node[anchor=south] {F};
+            \filldraw[black] (2,1) circle (1pt) node[anchor=south] {G};
+            %\filldraw[black] (3,1) circle (1pt) node[anchor=south] {H};
+
+            % Connect the points with different line styles
+            \draw[red,thick] (0,0) -- (1,0); % Solid line
+            \draw[green,thick] (1,0) -- (2,0); % Dashed line
+            %\draw[dotted, thick] (2,0) -- (3,0); % Dotted line
+            \draw[yellow,thick] (0,1) -- (1,1); % Dash-dot line
+            \draw[thick] (1,1) -- (2,1); % Solid line
+            %\draw[dashed, thick] (2,1) -- (3,1); % Dashed line
+            \draw[blue,thick] (0,0) -- (0,1); % Dotted line
+            \draw[orange,thick] (1,0) -- (1,1); % Dash-dot line
+            \draw[purple,thick] (2,0) -- (2,1); % Solid line
+            %\draw[dashed, thick] (3,0) -- (3,1); % Dashed line
+
+            % Label the lattice
+            \node at (1, -0.5) {2x1 Lattice};
+        \end{tikzpicture}
+    \end{center}
+    \columnbreak
+    \begin{center}
+                % 3D Cube with connections following the lattice pattern
+        \begin{tikzpicture}[scale=1.5]
+            % Draw the vertices of the cube (front and back face)
+            \filldraw[black] (0,0,0) circle (1pt) node[anchor=north] {D}; % Front bottom left
+            \filldraw[black] (1,0,0) circle (1pt) node[anchor=north] {C}; % Front bottom right
+            \filldraw[black] (0,1,0) circle (1pt) node[anchor=south east] {H}; % Front top left
+            \filldraw[black] (1,1,0) circle (1pt) node[anchor=south] {G}; % Front top right
+
+            \filldraw[black] (0,0,1) circle (1pt) node[anchor=north east] {A}; % Back bottom left
+            \filldraw[black] (1,0,1) circle (1pt) node[anchor=north] {B}; % Back bottom right
+            \filldraw[black] (0,1,1) circle (1pt) node[anchor=south east] {E}; % Back top left
+            \filldraw[black] (1,1,1) circle (1pt) node[anchor=south] {F}; % Back top right
+
+            % Connect the vertices with corresponding line styles from the lattice
+            %\draw[green,thick] (0,0,0) -- (1,0,0); % Solid line (A-B)
+            \draw[purple,thick] (1,0,0) -- (1,1,0); % Dashed line (B-F)
+            %\draw[purple,thick] (0,1,0) -- (1,1,0); % Dotted line (E-F)
+            %\draw[green,thick] (0,0,0) -- (0,1,0); % Dash-dot line (A-E)
+
+            \draw[red,thick] (0,0,1) -- (1,0,1); % Solid line (C-D)
+            \draw[orange,thick] (1,0,1) -- (1,1,1); % Dashed line (D-H)
+            \draw[yellow,thick] (0,1,1) -- (1,1,1); % Dotted line (G-H)
+            \draw[blue,thick] (0,0,1) -- (0,1,1); % Dash-dot line (C-G)
+
+            % Connect the front and back face vertices
+            %\draw[blue,thick] (0,0,0) -- (0,0,1); % Solid line (A-C)
+            \draw[green,thick] (1,0,0) -- (1,0,1); % Dashed line (B-D)
+            %\draw[blue,thick] (0,1,0) -- (0,1,1); % Dotted line (E-G)
+            \draw[,thick] (1,1,0) -- (1,1,1); % Dash-dot line (F-H)
+
+            % Label the cube
+            \node at (0.5, -0.75, 0.5) {(2+1)D Cube};
+        \end{tikzpicture}        
+    \end{center}
+
+        \end{multicols}
+        It is easy to check that the $L_1$ or Manhattan distance between any two points on the square lattice is equal to the corresponding Hamming distance in $\mathbb{H}^{m+n}$.
+        This polynomial reduction completes the proof that if the number of cluster satisfies $k = 2^p \sim m^\epsilon$ or equivalently $p \sim \epsilon \log_2 m \sim C \log n$, then the hypercube clustering problem associated with the Boolean autoencoder is $\mathcal{NP}$-hard and the corresponding decision problem is $\mathcal{NP}$-complete.
+\end{frame}
+
+
+
+\begin{frame}
+    \begin{center}
+        \Huge
+        Thank you for your attention!
+    \end{center}
+\end{frame}
 
 \end{document}

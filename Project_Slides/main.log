@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.18)  29 AUG 2024 16:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.18)  24 SEP 2024 23:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -127,8 +127,8 @@ Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 \pgfmath@stack@operation=\toks25
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count288
-))) (/usr/local/texlive/2024/texmf-dist/tex/latex/base/size11.clo
-File: size11.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+))) (/usr/local/texlive/2024/texmf-dist/tex/latex/extsizes/size9.clo
+File: size9.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
  (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
@@ -724,23 +724,23 @@ LaTeX Font Info:    ... okay on input line 39.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(10.95003pt, 342.2953pt, 10.95003pt)
+* h-part:(L,W,R)=(9.24994pt, 345.69548pt, 9.24994pt)
 * v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
 * \paperwidth=364.19536pt
 * \paperheight=273.14662pt
-* \textwidth=342.2953pt
+* \textwidth=345.69548pt
 * \textheight=244.6939pt
-* \oddsidemargin=-61.31996pt
-* \evensidemargin=-61.31996pt
+* \oddsidemargin=-63.02005pt
+* \evensidemargin=-63.02005pt
 * \topmargin=-72.26999pt
 * \headheight=14.22636pt
 * \headsep=0.0pt
-* \topskip=11.0pt
+* \topskip=9.0pt
 * \footskip=14.22636pt
 * \marginparwidth=4.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=8.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -859,64 +859,80 @@ File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mat
 
 ] [6
 
-] [7
+]
+<./Images/LinearAutoenc_Saddles.png, id=260, 1209.51875pt x 793.96625pt>
+File: ./Images/LinearAutoenc_Saddles.png Graphic file (type png)
+<use ./Images/LinearAutoenc_Saddles.png>
+Package pdftex.def Info: ./Images/LinearAutoenc_Saddles.png  used on input line 134.
+(pdftex.def)             Requested size: 138.27608pt x 90.76508pt.
+ [7
 
-] [8
+ <./Images/LinearAutoenc_Saddles.png>] [8
 
 ] [9
 
 ] [10
 
+] [11
+
+] [12
+
+] [13
+
 ]
-<./Images/Euclidean_Voronoi_diagram.png, id=384, 575.14874pt x 575.14874pt>
+<./Images/Euclidean_Voronoi_diagram.png, id=483, 575.14874pt x 575.14874pt>
 File: ./Images/Euclidean_Voronoi_diagram.png Graphic file (type png)
 <use ./Images/Euclidean_Voronoi_diagram.png>
-Package pdftex.def Info: ./Images/Euclidean_Voronoi_diagram.png  used on input line 202.
-(pdftex.def)             Requested size: 102.68962pt x 102.68858pt.
-<./Images/Manhattan_Voronoi_Diagram.png, id=386, 575.14874pt x 575.14874pt>
+Package pdftex.def Info: ./Images/Euclidean_Voronoi_diagram.png  used on input line 267.
+(pdftex.def)             Requested size: 103.70969pt x 103.7066pt.
+<./Images/Manhattan_Voronoi_Diagram.png, id=484, 575.14874pt x 575.14874pt>
 File: ./Images/Manhattan_Voronoi_Diagram.png Graphic file (type png)
 <use ./Images/Manhattan_Voronoi_Diagram.png>
-Package pdftex.def Info: ./Images/Manhattan_Voronoi_Diagram.png  used on input line 202.
-(pdftex.def)             Requested size: 102.68962pt x 102.68858pt.
- [11
+Package pdftex.def Info: ./Images/Manhattan_Voronoi_Diagram.png  used on input line 267.
+(pdftex.def)             Requested size: 103.70969pt x 103.7066pt.
+ [14
 
  <./Images/Euclidean_Voronoi_diagram.png> <./Images/Manhattan_Voronoi_Diagram.png>]
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/b/it' instead on input line 214.
+(Font)              using `OT1/cmss/b/it' instead on input line 280.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/b/it' undefined
-(Font)              using `OT1/cmss/b/n' instead on input line 214.
+(Font)              using `OT1/cmss/b/n' instead on input line 280.
 
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 214.
-[12
-
-]
-<./Images/Hypercube4Dimensions.png, id=455, 404.51125pt x 293.095pt>
-File: ./Images/Hypercube4Dimensions.png Graphic file (type png)
-<use ./Images/Hypercube4Dimensions.png>
-Package pdftex.def Info: ./Images/Hypercube4Dimensions.png  used on input line 229.
-(pdftex.def)             Requested size: 136.91603pt x 99.20375pt.
- [13
-
- <./Images/Hypercube4Dimensions.png>] [14
-
-]
-
-LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/b/it' instead on input line 260.
-
-LaTeX Font Info:    Font shape `OT1/cmss/b/it' in size <10.95> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 260.
-
-LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/b/it' instead on input line 260.
-
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <9> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 280.
 [15
 
-] [16
+]
+<./Images/Hypercube4Dimensions.png, id=553, 404.51125pt x 293.095pt>
+File: ./Images/Hypercube4Dimensions.png Graphic file (type png)
+<use ./Images/Hypercube4Dimensions.png>
+Package pdftex.def Info: ./Images/Hypercube4Dimensions.png  used on input line 295.
+(pdftex.def)             Requested size: 138.27608pt x 100.19211pt.
+ [16
+
+ <./Images/Hypercube4Dimensions.png>] [17
+
+]
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/b/it' instead on input line 326.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/it' in size <9> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 326.
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/b/it' instead on input line 326.
+
+[18
+
+] [19
+
+] [20
+
+] [21
 
 ]
 \tf@nav=\write6
@@ -941,18 +957,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: FC6DB4EB4D3B05DD78BCAE4B372F71DA;569.
  ) 
 Here is how much of TeX's memory you used:
- 26740 strings out of 474104
- 544293 string characters out of 5743473
- 1946493 words of memory out of 5000000
- 48518 multiletter control sequences out of 15000+600000
- 570566 words of font info for 80 fonts, out of 8000000 for 9000
+ 26780 strings out of 474104
+ 545289 string characters out of 5743473
+ 1953493 words of memory out of 5000000
+ 48542 multiletter control sequences out of 15000+600000
+ 568414 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,123p,509b,1078s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (16 pages, 245717 bytes).
+ 128i,21n,123p,659b,1078s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (21 pages, 331026 bytes).
 PDF statistics:
- 651 PDF objects out of 1000 (max. 8388607)
- 523 compressed objects within 6 object streams
- 37 named destinations out of 1000 (max. 500000)
- 378 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 818 PDF objects out of 1000 (max. 8388607)
+ 665 compressed objects within 7 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 419 words of extra memory for PDF output out of 10000 (max. 10000000)
 

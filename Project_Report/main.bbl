@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{13}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -23,6 +23,11 @@ Pierre Baldi and Kurt Hornik.
 \newblock ISSN 0893-6080.
 \newblock \doi{https://doi.org/10.1016/0893-6080(89)90014-2}.
 \newblock URL \url{https://www.sciencedirect.com/science/article/pii/0893608089900142}.
+
+\bibitem[Eckart and Young(1936)]{eckart1936approximation}
+Carl Eckart and Gale Young.
+\newblock The approximation of one matrix by another of lower rank.
+\newblock \emph{Psychometrika}, 1\penalty0 (3):\penalty0 211--218, 1936.
 
 \bibitem[Garey and Johnson(1979)]{garey1979computers}
 Michael~R Garey and David~S Johnson.
